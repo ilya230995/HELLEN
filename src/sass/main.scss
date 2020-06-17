@@ -1,0 +1,11 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import 'base.scss';
+@import './Helpers/fonts';
+@import './Helpers/variables';
+@import './Helpers/mixins';
+
+@import './Components/container.scss';
