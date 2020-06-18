@@ -1,0 +1,14 @@
+.modal-btn {
+    width: 246px;
+    height: 44px;
+    border: 2px solid rgb(255, 107, 8);
+    background-color: rgb(255, 107, 8);
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 110px;
+    letter-spacing: 130px;
+    &_white {
+        background-color: none;
+    }
+}
