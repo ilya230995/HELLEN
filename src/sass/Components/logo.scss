@@ -1,0 +1,31 @@
+.site-logo {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 126px;
+  font-family: $main-font;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 800;
+  vertical-align: 1.25px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-logo__img {
+  width: 21px;
+  height: 30px;
+}
+
+.site-logo__ru {
+  margin-top: -9px;
+  font-size: 5.3px;
+  line-height: 1.2;
+  font-weight: 700;
+  vertical-align: 0.689px;
+  text-transform: uppercase;
+}
+
+.site-logo__span {
+  color: $third-color;
+}
