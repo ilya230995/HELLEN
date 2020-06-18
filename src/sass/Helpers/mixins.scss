@@ -1,54 +1,61 @@
 @mixin font-black ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    letter-spacing: 50px;
-    color: $fourth-color;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  letter-spacing: 50px;
+  color: $fourth-color;
 }
+
 @mixin font-grey ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    letter-spacing: 50px;
-    color: $fifth-color;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  letter-spacing: 50px;
+  color: $fifth-color;
 }
+
 @mixin font-black-medium ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    letter-spacing: 50px;
-    color: $fifth-color;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  letter-spacing: 50px;
+  color: $fifth-color;
 }
+
 @mixin font-orange ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    letter-spacing: 50px;
-    color: $third-color;}
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  letter-spacing: 50px;
+  color: $third-color;
+}
+
 @mixin secion-title ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    color: $main-color;
-    letter-spacing: 50px; 
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  color: $main-color;
+  letter-spacing: 50px;
 }
+
 @mixin section-title_white ($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-    font-family: $main-font;
-    color: $secondary-color;
-    letter-spacing: 50px;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  font-family: $main-font;
+  color: $secondary-color;
+  letter-spacing: 50px;
 }
+
 @mixin pseudo {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: $third-color;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: $third-color;
 }
