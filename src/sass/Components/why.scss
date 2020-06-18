@@ -1,0 +1,47 @@
+.why {
+  background-color: black;
+
+  &__list {
+    background-color: $secondary-color;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    counter-reset: why-box;
+  }
+
+  &__item {
+    counter-increment: why-box;
+    position: relative;
+    letter-spacing: 0.7px;
+
+    &::before {
+      @include pseudo;
+    }
+
+    &::after {
+      content: "0"counter(why-box);
+      color: $third-color;
+      position: absolute;
+      top: 0;
+      left: 36px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      line-height: 29.17px;
+      font-weight: 500;
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+
+}
+
+.title {
+  color: $secondary-color;
+}
