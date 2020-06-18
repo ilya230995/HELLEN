@@ -1,0 +1,11 @@
+.section-title {
+    font-size: 20px;
+    font-family: $main-font;
+    color: $main-color;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 50;
+    &_white {
+        color: $secondary-color;
+    }
+}
