@@ -1,14 +1,19 @@
-.why-title {
-  color: $secondary-color;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  font-weight: 800;
-}
-
-
 .why {
-  background-color: black;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient($fourth-color 322px,
+      $secondary-color 322px);
+
+  &__title {
+    max-width: 142px;
+    color: $secondary-color;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 800;
+  }
 
   &__list {
     background-color: $secondary-color;
@@ -51,12 +56,4 @@
   }
 
 
-}
-
-.why-title {
-  color: $secondary-color;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 1px;
-  font-weight: 800;
 }
