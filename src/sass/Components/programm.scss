@@ -1,0 +1,100 @@
+.programm {
+  padding: 10px 0;
+}
+
+.wrapper {
+  max-width: 210px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.programm-title {
+  font-size: 20px;
+  line-height: 33px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-bottom: 38px;
+
+}
+
+.programm-list {
+  counter-reset: programm-box;
+  padding-left: 56px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+// .programm-list::before {
+//   content: '';
+//   display: inline-block;
+//   width: 2px;
+//   height: 1200px;
+//   background-color: $fifth-color;
+
+// }
+
+.programm-list__item {
+  position: relative;
+  counter-increment: programm-box;
+  padding-left: 30px;
+}
+
+.programm-list__item:not(:last-child) {
+  padding-bottom: 35px;
+  border-left: 2px solid $fifth-color;
+
+
+
+}
+
+.programm-list__item::before {
+  content: counter(programm-box)" семестр";
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 1.65px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 26px;
+
+}
+
+// .elipse::before {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   border-radius: 50%;
+//   background-color: $third-color;
+//   width: 10px;
+//   height: 10px;
+//   transform: translateX(-50%);
+// }
+
+
+.semestr-list__name {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.65px;
+  margin-top: 26px;
+  margin-bottom: 22px;
+
+}
+
+.semestr-list__name::before {
+  @include pseudo;
+  margin-right: 12px;
+}
+
+.semestr-list__desc {
+  font-size: 11px;
+  line-height: 1.2;
+  color: $fifth-color;
+  opacity: 50%;
+}
+
+.semestr-list__desc:not(:last-child) {
+  margin-bottom: 12px;
+}
