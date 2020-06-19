@@ -1,3 +1,12 @@
+.why-title {
+  color: $secondary-color;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+
 .why {
   background-color: black;
 
@@ -24,16 +33,18 @@
       content: "0"counter(why-box);
       color: $third-color;
       position: absolute;
-      top: 0;
+      top: 1px;
       left: 36px;
       transform: translateY(-50%);
       font-size: 14px;
-      line-height: 29.17px;
+      line-height: 29px;
       font-weight: 500;
     }
   }
 
   &__desc {
+    padding-top: 20px;
+    padding-bottom: 24px;
     font-size: 13px;
     line-height: 20px;
     font-weight: 700;
@@ -42,7 +53,7 @@
 
 }
 
-.title {
+.why-title {
   color: $secondary-color;
   font-size: 20px;
   line-height: 30px;
