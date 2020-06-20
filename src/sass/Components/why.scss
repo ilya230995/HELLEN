@@ -17,6 +17,8 @@
   }
 
   &__list {
+    position: relative;
+    z-index: 100;
     background-color: $secondary-color;
     max-width: 280px;
     margin-left: auto;
