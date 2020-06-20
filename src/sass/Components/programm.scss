@@ -10,6 +10,11 @@
     padding-bottom: 110px;
   }
 
+  @include for-size(desktop) {
+    padding-top: 82px;
+    padding-bottom: 24px;
+  }
+
   &-wrapper {
     max-width: 210px;
     margin-left: auto;
@@ -17,6 +22,12 @@
 
     @include for-size(tablet) {
       max-width: 630px;
+    }
+
+    @include for-size(desktop) {
+      max-width: 1220px;
+      display: flex;
+      align-items: ;
     }
   }
 
@@ -40,8 +51,8 @@
 
     @include for-size(desktop) {
       background-image: url(../images/laptop-1280/bg-our-program-laptop-1280.jpg);
-      right: 0;
-      bottom: 0px;
+      left: 0;
+      bottom: -224px;
       width: 546px;
       height: 397px;
     }
@@ -64,6 +75,12 @@
     color: $secondary-color;
 
     @include for-size(tablet) {
+      font-size: 42px;
+      letter-spacing: 2.1px;
+      margin-bottom: 58px;
+    }
+
+    @include for-size(tablet) {
       font-size: 26px;
       letter-spacing: 1.3px;
       margin-bottom: 58px;
@@ -76,8 +93,13 @@
     max-width: 100%;
     margin-left: 22px;
 
+
     @include for-size(tablet) {
       margin-left: 60px;
+    }
+
+    @include for-size(desktop) {
+      display: flex;
     }
 
     &::before {
@@ -85,13 +107,20 @@
       position: absolute;
       width: 2px;
       height: 93%;
-      left: 0;
+      left: -1px;
       top: 14px;
-      transform: translateX(-50%);
       background-color: $fifth-color;
 
       @include for-size(tablet) {
         height: 88%;
+      }
+
+      @include for-size(desktop) {
+        height: 2px;
+        width: 100vw;
+        left: 0;
+        top: 0px;
+
       }
     }
 
@@ -100,14 +129,21 @@
       counter-increment: programm-box;
       padding-left: 30px;
 
-      @include for-size(tablet) {}
-
+      @include for-size(desktop) {
+        padding-left: 0;
+        width: 230px;
+      }
 
       &:not(:last-child) {
         padding-bottom: 36px;
 
         @include for-size(tablet) {
           padding-bottom: 40px;
+        }
+
+        @include for-size(desktop) {
+          padding-bottom: 0;
+          margin-right: 28px;
         }
       }
 
@@ -120,7 +156,10 @@
         font-weight: 600;
         margin-bottom: 26px;
 
-        @include for-size(tablet) {}
+        @include for-size(desktop) {
+          font-size: 19px;
+          letter-spacing: 2.09px;
+        }
       }
 
       &::after {
@@ -143,6 +182,10 @@
 .semestr-list {
   @include for-size(tablet) {
     display: flex;
+  }
+
+  @include for-size(desktop) {
+    flex-direction: column;
 
   }
 
@@ -150,12 +193,20 @@
     @include for-size(tablet) {
       flex: 0 0 152px;
     }
+
+    @include for-size(desktop) {
+      flex: 0 0 100%;
+    }
   }
 
   &__item:not(:last-child) {
 
     @include for-size(tablet) {
       margin-right: 28px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 0px;
     }
   }
 
@@ -169,6 +220,12 @@
     margin-bottom: 22px;
 
     @include for-size(tablet) {
+      margin-top: 28px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 18px;
+      letter-spacing: 0.9px;
       margin-top: 28px;
     }
 
@@ -186,7 +243,9 @@
     color: $fifth-color;
     opacity: 50%;
 
-    @include for-size(tablet) {}
+    @include for-size(desktop) {
+      font-size: 19px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 12px;
