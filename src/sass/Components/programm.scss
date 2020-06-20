@@ -1,23 +1,13 @@
 .programm {
-  position: relative;
   padding-top: 50px;
-  padding-bottom: 46px;
+  padding-bottom: 36px;
   background-color: $fourth-color;
-}
-
-.img {
-  position: absolute;
-  content: '';
-  display: block;
   background-image: url(../images/mobile/bg-our-program-mobile.jpg);
   background-repeat: no-repeat;
-  bottom: -88px;
-  right: 0;
-  width: 143px;
-  height: 183px;
+  background-position: right 106%;
 }
 
-.wrapper {
+.programm-wrapper {
   max-width: 210px;
   margin-left: auto;
   margin-right: auto;
