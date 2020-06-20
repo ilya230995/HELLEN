@@ -8,17 +8,25 @@
       $secondary-color 322px);
 
   @include for-size (tablet) {
-    padding-top: 30px;
+    padding-top: 68px;
     padding-bottom: 30px;
   }
 
   &__title {
-    max-width: 142px;
+
     color: $secondary-color;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 1px;
     font-weight: 800;
+
+    @include for-size(mobile) {
+      max-width: 142px;
+    }
+
+    @include for-size(tablet) {
+      text-align: center;
+    }
   }
 
   &__list {
