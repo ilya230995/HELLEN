@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
         <nav class="navigation">
-            <a href="#" class="site-logo">
+            <a href="#" class="site-logo site-logo_header">
                 Hell
                 <img border="0" class="site-logo__img" src="./images/icons/logo.svg" alt="fire">
                 EN
@@ -14,15 +14,13 @@
               </a>            
             <ul class="menu-list">
                 <li class="menu-list__item"><a href="#" class="menu-list__link">Программа обучения</a></li>
-                <li class="menu-list__item"><a href="#" class="menu-list__link">о нас</a></li>
-                <li class="menu-list__item"><a href="#" class="menu-list__link">варианты обучения</a></li>
-                <li class="menu-list__item"><a href="#" class="menu-list__link">контакты</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">О нас</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Варианты обучения</a></li>
+                <li class="menu-list__item"><a href="#" class="menu-list__link">Контакты</a></li>
             </ul>
             <button class="modal-btn_white">консультация по телефону</button>
-            <div class="navigation__hamburger">
-                <span class="navigation__hamburger-span"></span>
-                <span class="navigation__hamburger-span"></span>
-                <span class="navigation__hamburger-span"></span>
+            <div class="hamburger">
+                <span></span>
             </div>
         </nav>
         <h2 class="section-title">Комплексная подготовка к ВНО <span class="text-br">по английскому языку</span></h2>
@@ -30,15 +28,25 @@
         <button class="modal-btn">хочу на бесплатное занятие</button>
         <ul class="about-list">
             <li class="about-list__item">
-                <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-female-student"></use></svg>
+                <div class="sprite-wrapper">
+                    <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-female-student"></use></svg>
+                    <div class="white-overlay"></div>
+                </div>
                 <p>Адаптированная <span class="text-br">авторская</span> программа ВНО</p>
             </li>
             <li class="about-list__item">
-                <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-mobile-learning"></use></svg>
+                <div class="sprite-wrapper">
+                    <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-mobile-learning"></use></svg>
+                    <div class="white-overlay"></div>
+                </div>
+
                 <p>Современные <span class="text-br">методики</span> обучения</p>
             </li>
             <li class="about-list__item">
-                <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-insurance"></use></svg>
+                <div class="sprite-wrapper">
+                    <svg class="about-list__icon"><use href="../images/icons/icons-sprite.svg#icon-insurance"></use></svg>
+                    <div class="white-overlay"></div>
+                </div>
                 <p>Финансовая <span class="text-br">гарантия</span> результата</p>
             </li>
         </ul>

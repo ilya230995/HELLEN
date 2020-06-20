@@ -2,11 +2,10 @@
     background-image: url(../../images/mobile/bg-header-mobile.png);
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     padding-top: 32px;
     padding-bottom: 54px;
     &__title-descr {
-        @include font-black (17px, 700, 20px);
+        @include font-black (17px, 700, 30px);
         margin: 0;
         margin-bottom: 36px;
     }
@@ -15,25 +14,108 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 52px;
-    &__hamburger {
-        display: block;
-        width: 26px;
-        height: 12px;
-    }
-    &__hamburger-span {
-        display: block;
-        height: 2px;
-        width: 100%;
-        margin-bottom: 2px;
-        background-color: $main-color;
-    }
-
+    margin-bottom: 52px;  
 }
 .menu-list,
 .modal-btn_white {
     display: none;
+    &_active {
+        display: block;
+    }
 }
+.menu-list{
+    &_active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item {
+        @include section-title_white (26px, 400, 30px); 
+        position: relative;
+        top: 180px;
+        // left: 50px;
+        letter-spacing: 1px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+            
+    }
+    &__link {
+        color: $secondary-color;
+    }
+}
+.hamburger {
+    display: block;
+    width: 26px;
+    height: 12px;
+    z-index: 3;
+    position: relative;
+    &_active {
+        &::after {
+            transform: rotate(-45deg);
+        }
+        &::before {
+            transform: rotate(45deg);
+            top: 10px;
+        }
+        & span {
+            transform: scale(0);
+        }
+    }
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $main-color;                    
+    }
+    &::after {
+        bottom: 0;
+    }
+    & span {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        top: 5px;
+        background-color: $main-color;
+    }
+}
+.hamburger_active::before,
+.hamburger_active::after {
+    background-color: $secondary-color;
+}
+.modal-btn_white {
+    width: 249px;
+    height: 47px;
+    border: 2px solid $third-color;
+    background: none;
+    font-family: $secondary-font;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $third-color;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+    &_active {
+        position: fixed;
+        top: 435px;
+        transform: translateX(14px);
+    }
+}
+
+  
 .section-title {
     @include font-black (20px, 800, 29px);
     margin: 0;
@@ -55,7 +137,8 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 308px; 
-    cursor: pointer;  
+    cursor: pointer;
+    outline: none;  
 }
 .about-list {
     &__item {
@@ -68,6 +151,30 @@
         width: 30px;
         height: 36px;
         fill: $third-color;
-        margin-right: 20px;
+    }
+}
+.sprite-wrapper {
+    width: 58px;
+    height: 58px;
+    border: 2px solid $third-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    position: relative;
+}
+.white-overlay {
+    background-color: $secondary-color;
+    width: 5px;
+    height: 34px;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    transform: translateX(3px);
+}
+.site-logo_header {
+    z-index: 5;
+    &_active {
+        color: $secondary-color;
     }
 }
