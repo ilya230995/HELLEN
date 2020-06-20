@@ -1,0 +1,73 @@
+.header {
+    background-image: url(../../images/mobile/bg-header-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    padding-top: 32px;
+    padding-bottom: 54px;
+    &__title-descr {
+        @include font-black (17px, 700, 20px);
+        margin: 0;
+        margin-bottom: 36px;
+    }
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+    &__hamburger {
+        display: block;
+        width: 26px;
+        height: 12px;
+    }
+    &__hamburger-span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-bottom: 2px;
+        background-color: $main-color;
+    }
+
+}
+.menu-list,
+.modal-btn_white {
+    display: none;
+}
+.section-title {
+    @include font-black (20px, 800, 29px);
+    margin: 0;
+    margin-bottom: 32px;
+}
+.text-br {
+    display: block;
+    &_grey {
+        @include font-grey (17px, 700, 20px);
+        display: block;
+    }
+    &_orange {
+        @include font-orange (17px, 700, 20px);
+        display: block;
+    }
+}
+.modal-btn {
+    @include modal-btn;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 308px; 
+    cursor: pointer;  
+}
+.about-list {
+    &__item {
+        @include font-black (15px, 700, 20px);
+        display: flex;
+        align-items: center
+
+    }
+    &__icon {
+        width: 30px;
+        height: 36px;
+        fill: $third-color;
+        margin-right: 20px;
+    }
+}
