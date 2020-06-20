@@ -1,0 +1,37 @@
+.contacts {
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+  padding-top: 16px;
+
+  &__logo-wrapper {
+    margin: 0 auto;
+  }
+  &__social {
+    width: 37px;
+    height: 37px;
+    margin: 0 auto;
+  }
+  &__phone {
+    margin-bottom: 25px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 600;
+    color: $fourth-color;
+    letter-spacing: 0.9px;
+    padding-left: 14px;
+    position: relative;
+  }
+  &__items {
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+.phone-icon {
+  fill: #ff6b08;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translateX(-600%);
+}

@@ -1,0 +1,100 @@
+.registration {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/mobile/bg-registration.png);
+
+  padding-top: 36px;
+  padding-bottom: 58px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    display: block;
+    width: 237px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 26.04px;
+    letter-spacing: 0.45px;
+  }
+
+  &__description {
+    width: 254px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+  }
+  &__description-wrapper {
+    text-align: center;
+
+    font-family: $main-font;
+    color: $secondary-color;
+    margin-bottom: 28px;
+  }
+  &__form-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  &__form-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__form-btn {
+    text-align: center;
+  }
+  &__form-input {
+    width: 280px;
+    height: 50px;
+    background: none;
+    border: 1px solid $secondary-color;
+    padding-left: 22px;
+    font-family: $main-font;
+    color: $secondary-color;
+    font-size: 13px;
+  }
+  &__form-input:required:focus {
+    outline: none;
+  }
+  &__form-input:required:focus:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+  &__form-input:required:focus:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+  &__form-input::placeholder {
+    color: $secondary-color;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.65px;
+    font-family: $main-font;
+  }
+  &__btn {
+    width: 246px;
+    height: 44px;
+    border: 2px solid rgb(255, 107, 8);
+    background-color: rgb(255, 107, 8);
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 11px;
+    color: $secondary-color;
+    letter-spacing: 1.43px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-resolution: 192dpi) {
+  .registration {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(../images/mobile/bg-registration@2x.png);
+  }
+}
+.registration__title,
+.registration__description {
+  margin: 0 auto;
+}
+
+.registration__title span,
+.registration__description span {
+  color: $third-color;
+}
