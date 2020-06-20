@@ -1,13 +1,23 @@
 .programm {
   padding-top: 50px;
-  padding-bottom: 36px;
+  padding-bottom: 40px;
   background-color: $fourth-color;
   position: relative;
   z-index: 10;
 
   @include for-size(tablet) {
     padding-top: 68px;
-    padding-bottom: 38px;
+    padding-bottom: 110px;
+  }
+
+  &-wrapper {
+    max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-size(tablet) {
+      max-width: 630px;
+    }
   }
 
   &-img {
@@ -45,15 +55,19 @@
     }
   }
 
-
-
   &-title {
     font-size: 20px;
-    line-height: 33px;
+    line-height: 1.2;
     font-weight: 800;
     letter-spacing: 1px;
-    padding-bottom: 38px;
+    margin-bottom: 38px;
     color: $secondary-color;
+
+    @include for-size(tablet) {
+      font-size: 26px;
+      letter-spacing: 1.3px;
+      margin-bottom: 58px;
+    }
   }
 
   &-list {
@@ -61,6 +75,10 @@
     counter-reset: programm-box;
     max-width: 100%;
     margin-left: 22px;
+
+    @include for-size(tablet) {
+      margin-left: 60px;
+    }
 
     &::before {
       content: '';
@@ -71,6 +89,10 @@
       top: 14px;
       transform: translateX(-50%);
       background-color: $fifth-color;
+
+      @include for-size(tablet) {
+        height: 88%;
+      }
     }
 
     &__item {
@@ -78,8 +100,15 @@
       counter-increment: programm-box;
       padding-left: 30px;
 
+      @include for-size(tablet) {}
+
+
       &:not(:last-child) {
-        padding-bottom: 35px;
+        padding-bottom: 36px;
+
+        @include for-size(tablet) {
+          padding-bottom: 40px;
+        }
       }
 
       &::before {
@@ -90,6 +119,8 @@
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 26px;
+
+        @include for-size(tablet) {}
       }
 
       &::after {
@@ -102,12 +133,32 @@
         width: 10px;
         height: 10px;
         transform: translateX(-50%);
+
+        @include for-size(tablet) {}
       }
     }
   }
 }
 
 .semestr-list {
+  @include for-size(tablet) {
+    display: flex;
+
+  }
+
+  &__item {
+    @include for-size(tablet) {
+      flex: 0 0 152px;
+    }
+  }
+
+  &__item:not(:last-child) {
+
+    @include for-size(tablet) {
+      margin-right: 28px;
+    }
+  }
+
   &__name {
     display: flex;
     align-items: center;
@@ -117,9 +168,15 @@
     margin-top: 26px;
     margin-bottom: 22px;
 
+    @include for-size(tablet) {
+      margin-top: 28px;
+    }
+
     &::before {
       @include pseudo;
       margin-right: 12px;
+
+      @include for-size(tablet) {}
     }
   }
 
@@ -129,8 +186,12 @@
     color: $fifth-color;
     opacity: 50%;
 
+    @include for-size(tablet) {}
+
     &:not(:last-child) {
       margin-bottom: 12px;
+
+      @include for-size(tablet) {}
     }
   }
 }
