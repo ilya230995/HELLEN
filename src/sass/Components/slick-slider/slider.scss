@@ -1,0 +1,130 @@
+//custom slider
+.slider-bg {
+  background-color: $slider-bg;
+  padding-top: 50px;
+}
+.slider-item {
+  background-color: $slider-bg;
+  // padding-bottom: 56px;
+  // padding-top: 52px;
+  display: flex;
+  justify-content: center;
+  max-width: 180px;
+  margin: auto;
+  position: relative;
+  &__container {
+    font-family: $main-font;
+    padding-top: 22px;
+    padding-bottom: 58px;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  &__list-people {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__prev,
+  &__next {
+    background-color: transparent;
+    border: none;
+  }
+  &__image-cover {
+    max-width: 66px;
+
+    display: flex;
+    justify-content: start;
+  }
+
+  // &__next::after,
+  // &__prev::before {
+  //   position: absolute;
+  //   top: 28;
+
+  //   content: '';
+  // }
+  // &_prev::before {
+  //   left: 0;
+  //   background-image: url('../images/mobile/slider/arrow-left.png');
+  // }
+  // &__next::after {
+  //   right: 0;
+  //   background-image: url('../images/mobile/slider/arrow-right.png');
+  // }
+
+  &__title {
+    text-align: center;
+    color: $main-color;
+    font-size: 20px;
+    line-height: 26.5px;
+    margin-bottom: 25px;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 21px;
+  }
+  &__nav-image {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto;
+    // margin-right: 50px;
+  }
+
+  &__secondary-title,
+  &__read-more {
+    color: $third-color;
+  }
+  &__secondary-title {
+    font-size: 13px;
+    line-height: 29.7px;
+  }
+  &__person-about {
+    text-align: center;
+    color: $main-color;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  &__person-education {
+    font-weight: 500;
+    color: $fifth-color;
+    font-size: 11px;
+    line-height: 16.7px;
+    margin-bottom: 26px;
+  }
+  &__person-education,
+  &__person-about {
+    max-width: 240px;
+    letter-spacing: 0.22px;
+  }
+  &__vk-icon {
+    width: 18px;
+    height: 14px;
+    fill: #436eab;
+    margin-bottom: 11px;
+  }
+  &__read-more {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .slider-item {
+    max-width: 508px;
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   .slider {
+//   }
+// }
