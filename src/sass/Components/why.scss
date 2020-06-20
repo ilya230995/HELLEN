@@ -6,6 +6,7 @@
   background: linear-gradient($fourth-color 322px,
       $secondary-color 322px);
 
+
   &__title {
     max-width: 142px;
     color: $secondary-color;
@@ -23,6 +24,7 @@
     padding: 28px;
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     counter-reset: why-box;
+    z-index: 100;
   }
 
   &__item {
