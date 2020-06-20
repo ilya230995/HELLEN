@@ -7,6 +7,11 @@
   background: linear-gradient($fourth-color 322px,
       $secondary-color 322px);
 
+  @include for-size (tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   &__title {
     max-width: 142px;
     color: $secondary-color;
