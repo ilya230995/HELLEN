@@ -19,20 +19,33 @@
     background-repeat: no-repeat;
     width: 143px;
     height: 172px;
+
+    @include for-size(tablet) {
+      background-image: url(../images/tablet/bg-our-program-tablet.jpg);
+      right: 0;
+      bottom: 0px;
+      width: 406px;
+      height: 282px;
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/laptop-1280/bg-our-program-laptop-1280.jpg);
+      right: 0;
+      bottom: 0px;
+      width: 546px;
+      height: 397px;
+    }
+
+    @include for-size(hd-desktop) {
+      background-image: url(../images/laptop-1680/bg-our-program-laptop-1680.jpg);
+      right: 0;
+      bottom: 0px;
+      width: 700px;
+      height: 485px;
+    }
   }
 
-  @include for-size(tablet) {
-    background-image: url(../images/tablet/bg-our-program-tablet.jpg);
-    bottom: 0px;
-    width: 406px;
-    height: 282px;
-  }
 
-  &-wrapper {
-    max-width: 210px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   &-title {
     font-size: 20px;
