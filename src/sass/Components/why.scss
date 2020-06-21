@@ -4,16 +4,14 @@
   height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: linear-gradient($fourth-color 322px,
-      $secondary-color 322px);
+  background: linear-gradient($fourth-color 322px, $secondary-color 322px);
 
-  @include for-size (tablet) {
+  @include for-size(tablet) {
     padding-top: 68px;
     padding-bottom: 30px;
   }
 
   &__title {
-
     color: $secondary-color;
     font-size: 20px;
     line-height: 30px;
@@ -51,7 +49,7 @@
     }
 
     &::after {
-      content: "0"counter(why-box);
+      content: '0' counter(why-box);
       color: $third-color;
       position: absolute;
       top: 1px;
@@ -70,6 +68,4 @@
     line-height: 20px;
     font-weight: 700;
   }
-
-
 }
