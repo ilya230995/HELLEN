@@ -25,6 +25,12 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include for-size(desktop) {
+      max-width: 100%;
+      border-top: 2px solid $fifth-color;
+    }
+
+    @include for-size(hd-desktop) {}
   }
 
   &-img {
@@ -33,6 +39,7 @@
     right: 0;
     bottom: -88px;
     background-image: url(../images/mobile/bg-our-program-mobile.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     width: 143px;
     height: 172px;
@@ -110,15 +117,13 @@
     counter-reset: programm-box;
     max-width: 100%;
 
-
     @include for-size(mobile) {
       margin-left: 62px;
     }
 
-    @media (min-width:768px) and (max-width:1279px) {
+    @media (min-width: 768px) and (max-width: 1279px) {
       margin-left: 90px;
     }
-
 
     @include for-size(desktop) {
       display: flex;
@@ -139,11 +144,10 @@
       }
 
       @include for-size(desktop) {
-        height: 2px;
-        width: 100vw;
-        left: 0;
-        top: 0;
+        display: none;
       }
+
+
     }
 
     &__item {
@@ -163,12 +167,11 @@
       }
 
       &:not(:last-child) {
-
         @include for-size(mobile) {
           padding-bottom: 36px;
         }
 
-        @include for-size(tablet) @include for-size(max-desktop) {
+        @media (min-width: 768px) and (max-width: 1279px) {
           padding-bottom: 40px;
         }
 
@@ -179,7 +182,6 @@
         @include for-size(hd-desktop) {
           width: 260px;
         }
-
       }
 
       &::before {
@@ -221,8 +223,7 @@
         }
 
         @include for-size(hd-desktop) {
-          top: -74px;
-
+          top: -77px;
         }
       }
     }
@@ -236,21 +237,18 @@
 
   @include for-size(desktop) {
     flex-direction: column;
-
   }
 
   &__item {
-    @include for-size(tablet) @include for-size(max-desktop) {
+    @media (min-width: 768px) and (max-width: 1279px) {
       flex: 0 0 152px;
     }
-
   }
 
   &__item:not(:last-child) {
-    @include for-size(tablet) @include for-size(max-desktop) {
+    @media (min-width: 768px) and (max-width: 1279px) {
       margin-right: 28px;
     }
-
   }
 
   &__name {
@@ -277,13 +275,11 @@
       font-size: 21px;
       letter-spacing: 1px;
       margin-top: 34px;
-
     }
 
     &::before {
       @include pseudo;
       margin-right: 12px;
-
     }
   }
 
@@ -300,8 +296,6 @@
 
     &:not(:last-child) {
       margin-bottom: 10px;
-
-
     }
   }
 }
