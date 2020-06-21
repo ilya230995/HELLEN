@@ -1,21 +1,20 @@
 $(document).on('ready', function () {
-  $('.slider-for').slick({
+  $('.slider-content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-item',
+    asNavFor: '.slider-custom',
   });
-  $('.slider-item').slick({
+  $('.slider-custom').slick({
     slidesToShow: 3,
 
     slidesToScroll: 3,
     draggable: false,
-    asNavFor: '.slider-for',
+    asNavFor: '.slider-content',
 
     centerMode: true,
     focusOnSelect: true,
-    centerMode: true,
     centerPadding: '0px',
     arrows: true,
     mobileFirst: true,
@@ -24,8 +23,13 @@ $(document).on('ready', function () {
         breakpoint: 768,
         settings: {
           slidesToShow: 7,
+          arrows: true,
 
-          appendArrows: $('.slider-for'),
+          // prevArrow: $('.slider-custom__left-block'),
+          // nextArrow: $('.slider-custom__right-block'),
+          // appendArrows: $(
+          //   '.slider-custom__content .slider-custom__content__tablet-arrows',
+          // ),
         },
       },
     ],
