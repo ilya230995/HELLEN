@@ -16,19 +16,13 @@
   }
 
   &-wrapper {
-    max-width: 210px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 
-    @include for-size(tablet) {
-      max-width: 630px;
-    }
+    @include for-size(tablet) {}
 
-    @include for-size(desktop) {
-      max-width: 1220px;
-      display: flex;
-      align-items: ;
-    }
+    @include for-size(desktop) {}
   }
 
   &-img {
@@ -91,15 +85,21 @@
     position: relative;
     counter-reset: programm-box;
     max-width: 100%;
-    margin-left: 22px;
 
 
-    @include for-size(tablet) {
-      margin-left: 60px;
+    @include for-size(mobile) {
+      margin-left: 22px;
+    }
+
+    @include for-size(tablet) @include for-size(max-desktop) {
+      margin-left: 90px;
     }
 
     @include for-size(desktop) {
       display: flex;
+      justify-content: space-between;
+
+
     }
 
     &::before {
@@ -120,31 +120,33 @@
         width: 100vw;
         left: 0;
         top: 0px;
-
       }
     }
 
     &__item {
       position: relative;
       counter-increment: programm-box;
-      padding-left: 30px;
 
-      @include for-size(desktop) {
-        padding-left: 0;
-        width: 230px;
+
+      @include for-size(max-desktop) {
+        padding-left: 30px;
       }
 
       &:not(:last-child) {
-        padding-bottom: 36px;
 
-        @include for-size(tablet) {
+
+        @include for-size(mobile) {
+          padding-bottom: 36px;
+        }
+
+        @include for-size(tablet) @include for-size(max-desktop) {
           padding-bottom: 40px;
         }
 
         @include for-size(desktop) {
-          padding-bottom: 0;
-          margin-right: 28px;
+          width: 230px;
         }
+
       }
 
       &::before {
@@ -190,24 +192,18 @@
   }
 
   &__item {
-    @include for-size(tablet) {
+    @include for-size(tablet) @include for-size(max-desktop) {
       flex: 0 0 152px;
     }
 
-    @include for-size(desktop) {
-      flex: 0 0 100%;
-    }
   }
 
   &__item:not(:last-child) {
-
-    @include for-size(tablet) {
+    @include for-size(tablet) @include for-size(max-desktop) {
       margin-right: 28px;
     }
 
-    @include for-size(desktop) {
-      margin-right: 0px;
-    }
+    @include for-size(desktop) {}
   }
 
   &__name {
@@ -226,7 +222,7 @@
     @include for-size(desktop) {
       font-size: 18px;
       letter-spacing: 0.9px;
-      margin-top: 28px;
+
     }
 
     &::before {
