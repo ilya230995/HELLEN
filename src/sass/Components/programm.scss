@@ -15,14 +15,16 @@
     padding-bottom: 24px;
   }
 
+  @include for-size(hd-desktop) {
+    padding-top: 132px;
+    padding-bottom: 32px;
+  }
+
   &-wrapper {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 
-    @include for-size(tablet) {}
-
-    @include for-size(desktop) {}
   }
 
   &-img {
@@ -46,7 +48,7 @@
     @include for-size(desktop) {
       background-image: url(../images/laptop-1280/bg-our-program-laptop-1280.jpg);
       left: 0;
-      bottom: -224px;
+      bottom: -160px;
       width: 546px;
       height: 397px;
     }
@@ -54,9 +56,25 @@
     @include for-size(hd-desktop) {
       background-image: url(../images/laptop-1680/bg-our-program-laptop-1680.jpg);
       right: 0;
-      bottom: 0px;
+      bottom: -278px;
       width: 700px;
       height: 485px;
+    }
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/mobile/bg-our-program-mobile@2x.jpg);
+
+      @include for-size(tablet) {
+        background-image: url(../images/tablet/bg-our-program-tablet@2x.jpg);
+      }
+
+      @include for-size(desktop) {
+        background-image: url(../images/laptop-1280/bg-our-program-laptop-1280@2x.jpg);
+      }
+
+      @include for-size(hd-desktop) {
+        background-image: url(../images/laptop-1680/bg-our-program-laptop-1680@2x.jpg);
+      }
     }
   }
 
@@ -69,15 +87,21 @@
     color: $secondary-color;
 
     @include for-size(tablet) {
-      font-size: 42px;
-      letter-spacing: 2.1px;
-      margin-bottom: 58px;
-    }
-
-    @include for-size(tablet) {
       font-size: 26px;
       letter-spacing: 1.3px;
       margin-bottom: 58px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 42px;
+      letter-spacing: 2.1px;
+      margin-bottom: 50px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 46px;
+      letter-spacing: 2.3px;
+      margin-bottom: 90px;
     }
   }
 
@@ -88,18 +112,17 @@
 
 
     @include for-size(mobile) {
-      margin-left: 22px;
+      margin-left: 62px;
     }
 
-    @include for-size(tablet) @include for-size(max-desktop) {
+    @media (min-width:768px) and (max-width:1279px) {
       margin-left: 90px;
     }
+
 
     @include for-size(desktop) {
       display: flex;
       justify-content: space-between;
-
-
     }
 
     &::before {
@@ -119,7 +142,7 @@
         height: 2px;
         width: 100vw;
         left: 0;
-        top: 0px;
+        top: 0;
       }
     }
 
@@ -127,13 +150,19 @@
       position: relative;
       counter-increment: programm-box;
 
-
       @include for-size(max-desktop) {
         padding-left: 30px;
       }
 
-      &:not(:last-child) {
+      @include for-size(desktop) {
+        margin-top: 46px;
+      }
 
+      @include for-size(hd-desktop) {
+        margin-top: 68px;
+      }
+
+      &:not(:last-child) {
 
         @include for-size(mobile) {
           padding-bottom: 36px;
@@ -145,6 +174,10 @@
 
         @include for-size(desktop) {
           width: 230px;
+        }
+
+        @include for-size(hd-desktop) {
+          width: 260px;
         }
 
       }
@@ -162,6 +195,11 @@
           font-size: 19px;
           letter-spacing: 2.09px;
         }
+
+        @include for-size(hd-desktop) {
+          font-size: 21px;
+          letter-spacing: 2.3px;
+        }
       }
 
       &::after {
@@ -175,7 +213,17 @@
         height: 10px;
         transform: translateX(-50%);
 
-        @include for-size(tablet) {}
+        @include for-size(desktop) {
+          top: -54px;
+          left: 8px;
+          width: 17px;
+          height: 17px;
+        }
+
+        @include for-size(hd-desktop) {
+          top: -74px;
+
+        }
       }
     }
   }
@@ -203,7 +251,6 @@
       margin-right: 28px;
     }
 
-    @include for-size(desktop) {}
   }
 
   &__name {
@@ -222,6 +269,14 @@
     @include for-size(desktop) {
       font-size: 18px;
       letter-spacing: 0.9px;
+      margin-top: 44px;
+      margin-bottom: 20px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+      letter-spacing: 1px;
+      margin-top: 34px;
 
     }
 
@@ -229,24 +284,24 @@
       @include pseudo;
       margin-right: 12px;
 
-      @include for-size(tablet) {}
     }
   }
 
   &__desc {
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 20px;
     color: $fifth-color;
     opacity: 50%;
 
     @include for-size(desktop) {
       font-size: 19px;
+      line-height: 29px;
     }
 
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
 
-      @include for-size(tablet) {}
+
     }
   }
 }

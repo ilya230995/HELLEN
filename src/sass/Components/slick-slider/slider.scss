@@ -56,22 +56,6 @@ $slider-bg: #f9f9f9;
     justify-content: start;
   }
 
-  // &__next::after,
-  // &__prev::before {
-  //   position: absolute;
-  //   top: 28;
-
-  //   content: '';
-  // }
-  // &_prev::before {
-  //   left: 0;
-  //   background-image: url('../images/mobile/slider/arrow-left.png');
-  // }
-  // &__next::after {
-  //   right: 0;
-  //   background-image: url('../images/mobile/slider/arrow-right.png');
-  // }
-
   &__title {
     text-align: center;
     color: $main-color;
@@ -95,7 +79,6 @@ $slider-bg: #f9f9f9;
     height: 55px;
 
     margin: 0 auto;
-    // margin-right: 50px;
   }
 
   &__secondary-title,
@@ -105,7 +88,6 @@ $slider-bg: #f9f9f9;
   &__secondary-title {
     font-size: 13px;
     margin-bottom: 5px;
-    // line-height: 29.7px;
   }
   &__person-about,
   &__person-about-tablet {
@@ -123,7 +105,7 @@ $slider-bg: #f9f9f9;
     font-weight: 500;
     color: $fifth-color;
     font-size: 11px;
-    // line-height: 1.2em;
+
     margin-bottom: 23px;
   }
   &__person-education,
@@ -184,8 +166,8 @@ $slider-bg: #f9f9f9;
       justify-content: start;
     }
   }
-  //slider arrows
 
+  //slider arrows
   .slick-prev {
     left: -110px;
   }
@@ -209,7 +191,6 @@ $slider-bg: #f9f9f9;
     &__right-block {
       width: 700px;
       text-align: left;
-      // justify-content: flex-start;
       align-items: flex-start;
     }
     &__content {
