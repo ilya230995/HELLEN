@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column-reverse;
   padding-bottom: 10px;
-  padding-top: 16px;
+  padding-top: 34px;
 
   &__logo-wrapper {
     margin: 0 auto;
@@ -19,7 +19,7 @@
     font-size: 18px;
     font-weight: 600;
     color: $fourth-color;
-    letter-spacing: 0.9px;
+    letter-spacing: 0.6px;
     padding-left: 14px;
     position: relative;
   }
@@ -30,11 +30,11 @@
 }
 .phone-icon {
   fill: #ff6b08;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  left: 20px;
-  top: 2px;
+  left: 23px;
+  top: 0px;
 }
 @media (min-width: 768px) {
   .container {
@@ -49,7 +49,8 @@
   }
   .contacts__logo-wrapper {
     margin: 0;
-    margin-right: 90px;
+    margin-right: 120px;
+    padding-left: 22px;
   }
   .contacts__items {
     margin-bottom: 0px;
@@ -58,8 +59,8 @@
   }
   .contacts__phone {
     margin-bottom: 0px;
-    padding-top: 5px;
-    margin-right: 70px;
+    padding-top: 10px;
+    margin-right: 56px;
     display: flex;
     font-size: 20px;
   }
@@ -69,8 +70,8 @@
   .phone-icon {
     width: 25px;
     height: 25px;
-    left: -10px;
-    top: 7px;
+    left: -20px;
+    top: 11px;
   }
   .contacts__phone::after {
     content: '';
@@ -79,10 +80,10 @@
     height: 29px;
     background-color: #e0e0e0;
     top: 3px;
-    left: 275px;
+    left: 265px;
   }
   .site-logo {
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
 }
 @media (min-width: 1280px) {
