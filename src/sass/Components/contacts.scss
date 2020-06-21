@@ -1,0 +1,119 @@
+.contacts {
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+  padding-top: 16px;
+
+  &__logo-wrapper {
+    margin: 0 auto;
+  }
+  &__social {
+    width: 37px;
+    height: 37px;
+    margin: 0 auto;
+  }
+  &__phone {
+    margin-bottom: 25px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 600;
+    color: $fourth-color;
+    letter-spacing: 0.9px;
+    padding-left: 14px;
+    position: relative;
+  }
+  &__items {
+    margin-bottom: 20px;
+    width: 280px;
+  }
+}
+.phone-icon {
+  fill: #ff6b08;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  top: 2px;
+}
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .contacts__logo-wrapper {
+    margin: 0;
+    margin-right: 90px;
+  }
+  .contacts__items {
+    margin-bottom: 0px;
+    width: 463px;
+    display: flex;
+  }
+  .contacts__phone {
+    margin-bottom: 0px;
+    padding-top: 5px;
+    margin-right: 70px;
+    display: flex;
+    font-size: 20px;
+  }
+  .contacts__social {
+    margin: 0;
+  }
+  .phone-icon {
+    width: 25px;
+    height: 25px;
+    left: -10px;
+    top: 7px;
+  }
+  .contacts__phone::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 29px;
+    background-color: #e0e0e0;
+    top: 3px;
+    left: 275px;
+  }
+  .site-logo {
+    transform: scale(1.5);
+  }
+}
+@media (min-width: 1280px) {
+  .contacts__phone {
+    font-size: 28px;
+    margin-right: 60px;
+  }
+  .contacts__logo-wrapper {
+    margin: 0;
+    margin-right: 290px;
+  }
+  .phone-icon {
+    width: 40px;
+    height: 40px;
+    left: -39px;
+    top: 3px;
+  }
+  .contacts {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .site-logo {
+    transform: scale(1.7);
+  }
+  .contacts__phone::after {
+    top: 5px;
+    left: 346px;
+  }
+  @media (min-width: 1680px) {
+    .contacts__logo-wrapper {
+      margin-right: 350px;
+    }
+  }
+}

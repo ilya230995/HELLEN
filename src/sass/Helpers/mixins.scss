@@ -3,7 +3,6 @@
   font-weight: $fw;
   line-height: $lh;
   font-family: $main-font;
-  letter-spacing: 50px;
   color: $fourth-color;
 }
 
@@ -12,7 +11,6 @@
   font-weight: $fw;
   line-height: $lh;
   font-family: $main-font;
-  letter-spacing: 50px;
   color: $fifth-color;
 }
 
@@ -21,7 +19,6 @@
   font-weight: $fw;
   line-height: $lh;
   font-family: $main-font;
-  letter-spacing: 50px;
   color: $fifth-color;
 }
 
@@ -30,7 +27,6 @@
   font-weight: $fw;
   line-height: $lh;
   font-family: $main-font;
-  letter-spacing: 50px;
   color: $third-color;
 }
 
@@ -40,7 +36,6 @@
   line-height: $lh;
   font-family: $main-font;
   color: $main-color;
-  letter-spacing: 50px;
 }
 
 @mixin section-title_white ($fs, $fw, $lh) {
@@ -49,7 +44,6 @@
   line-height: $lh;
   font-family: $main-font;
   color: $secondary-color;
-  letter-spacing: 50px;
 }
 
 @mixin pseudo {
@@ -58,4 +52,36 @@
   width: 25px;
   height: 2px;
   background-color: $third-color;
+}
+
+@mixin for-size($size) {
+  @if $size==mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $size==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $size==max-desktop {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @else if $size==desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $size==hd-desktop {
+    @media (min-width: 1680px) {
+      @content;
+    }
+  }
 }
