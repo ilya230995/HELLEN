@@ -1,0 +1,131 @@
+.registration {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/mobile/bg-registration.png);
+  padding-top: 54px;
+  padding-bottom: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include for-size(tablet) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(../images/tablet/bg-registration-tablet.png);
+    @media (min-resolution: 192dpi) {
+      .registration {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url(../images/tablet/bg-registration-tablet@2x.png);
+      }
+    }
+    padding-top: 56px;
+    padding-bottom: 62px;
+  }
+  &__title {
+    display: block;
+    width: 237px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 26.04px;
+    letter-spacing: 0.45px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    @include for-size(tablet) {
+      width: 546px;
+      font-size: 22px;
+      line-height: 38.04px;
+      letter-spacing: 0.45px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__description {
+    width: 254px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    margin: 0 auto;
+    @include for-size(tablet) {
+      width: 455px;
+      font-size: 15px;
+      text-align: left;
+      letter-spacing: 1.8px;
+    }
+  }
+  &__description-wrapper {
+    font-family: $main-font;
+    color: $secondary-color;
+    margin-bottom: 28px;
+    @include for-size(tablet) {
+      margin-bottom: 36px;
+    }
+  }
+  &__form-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 56px;
+    @include for-size(tablet) {
+      margin-bottom: 36px;
+    }
+  }
+  &__form-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &__form-btn {
+    text-align: center;
+  }
+  &__form-input {
+    width: 280px;
+    height: 50px;
+    background: none;
+    border: 1px solid $secondary-color;
+    padding-left: 22px;
+    font-family: $main-font;
+    color: $secondary-color;
+    font-size: 13px;
+    @include for-size(tablet) {
+      width: 400px;
+    }
+  }
+  &__form-input:required:focus {
+    outline: none;
+  }
+  &__form-input:required:focus:valid:not(:placeholder-shown) {
+    border-color: green;
+  }
+  &__form-input:required:focus:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+  &__form-input::placeholder {
+    color: $secondary-color;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.65px;
+    font-family: $main-font;
+  }
+  &__btn {
+    width: 246px;
+    height: 44px;
+    border: 2px solid rgb(255, 107, 8);
+    background-color: rgb(255, 107, 8);
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 11px;
+    color: $secondary-color;
+    letter-spacing: 1.43px;
+    text-transform: uppercase;
+    @include for-size(tablet) {
+      width: 250px;
+      height: 48px;
+    }
+  }
+  @include for-size(tablet) {
+    .span_mod {
+      letter-spacing: 2.6px;
+    }
+  }
+}
