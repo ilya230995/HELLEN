@@ -69,15 +69,15 @@
     color: $secondary-color;
 
     @include for-size(tablet) {
-      font-size: 42px;
-      letter-spacing: 2.1px;
-      margin-bottom: 58px;
-    }
-
-    @include for-size(tablet) {
       font-size: 26px;
       letter-spacing: 1.3px;
       margin-bottom: 58px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 42px;
+      letter-spacing: 2.1px;
+      margin-bottom: 50px;
     }
   }
 
@@ -99,7 +99,6 @@
       display: flex;
       justify-content: space-between;
 
-
     }
 
     &::before {
@@ -119,7 +118,7 @@
         height: 2px;
         width: 100vw;
         left: 0;
-        top: 0px;
+        top: 0;
       }
     }
 
@@ -131,6 +130,11 @@
       @include for-size(max-desktop) {
         padding-left: 30px;
       }
+
+      @include for-size(desktop) {
+        margin-top: 44px;
+      }
+
 
       &:not(:last-child) {
 
@@ -145,6 +149,7 @@
 
         @include for-size(desktop) {
           width: 230px;
+
         }
 
       }
@@ -175,7 +180,12 @@
         height: 10px;
         transform: translateX(-50%);
 
-        @include for-size(tablet) {}
+        @include for-size(desktop) {
+          top: -47px;
+          left: 6px;
+          width: 10px;
+          height: 10px;
+        }
       }
     }
   }
