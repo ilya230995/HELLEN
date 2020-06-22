@@ -4,9 +4,8 @@
 
   &__list {
     background-color: $secondary-color;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+
+    // width: 80%;
     padding: 28px;
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     counter-reset: why-box;
