@@ -11,7 +11,12 @@
     padding-bottom: 30px;
   }
 
+  &__span {
+    @include for-size(mobile) {
+      max-width: 142px;
+    }
 
+  }
 
   &__title {
     color: $secondary-color;
@@ -20,9 +25,6 @@
     letter-spacing: 1px;
     font-weight: 800;
 
-    @include for-size(mobile) {
-      max-width: 142px;
-    }
 
     @include for-size(tablet) {
       text-align: center;
@@ -52,6 +54,10 @@
     position: relative;
     letter-spacing: 0.7px;
 
+    &:not(:last-child) {
+      padding-bottom: 24px;
+    }
+
     @include for-size(tablet) {
       flex: 0 0 218px;
     }
@@ -75,15 +81,13 @@
 
   &__desc {
     padding-top: 20px;
-
     font-size: 13px;
     line-height: 20px;
     font-weight: 700;
 
+
+
   }
 
-  &__desc:not(:last-child) {
-    padding-bottom: 24px;
-  }
 
 }
