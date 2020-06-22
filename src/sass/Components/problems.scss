@@ -1,4 +1,6 @@
 .problems {
+  padding-top: 40px;
+
   &__bg {
     background: linear-gradient($fourth-color 518px, $secondary-color 518px);
   }
@@ -15,12 +17,16 @@
     background: url(../images/laptop-1280/bg-main-program-laptop-1280.jpg),
       linear-gradient($fourth-color 528px,
         $secondary-color 528px);
+    background-repeat: no-repeat;
+    background-position: right 0;
   }
 
   @include for-size(hd-desktop) {
     background: url(../images/laptop-1680/bg-main-program-laptop-1680.jpg),
       linear-gradient($fourth-color 562px,
         $secondary-color 562px);
+    background-repeat: no-repeat;
+    background-position: right 0;
   }
 
   &__wrapper {
@@ -30,7 +36,7 @@
       max-width: 456px;
     }
 
-    @include for-size(desctop) {
+    @include for-size(desktop) {
       max-width: 1210px;
     }
   }

@@ -6,7 +6,7 @@
 
 
   @include for-size(tablet) {
-    padding-top: 68px;
+    padding-top: 38px;
     padding-bottom: 30px;
   }
 
@@ -26,7 +26,7 @@
   }
 
   &__title {
-    display: inline-block;
+    display: block;
     margin: 0;
     color: $secondary-color;
     font-size: 20px;
@@ -35,7 +35,23 @@
     font-weight: 800;
     margin-bottom: 18px;
 
+    @include for-size(tablet) {
+      font-size: 26px;
+      line-height: 33px;
+    }
 
+    @include for-size(desktop) {
+      position: relative;
+      font-size: 42px;
+      line-height: 56px;
+      z-index: 100;
+      margin-bottom: 36px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 46px;
+      line-height: 62px;
+    }
 
   }
 
@@ -82,11 +98,11 @@
     }
 
     @include for-size(desktop) {
-      flex: 0 0 282px;
+      flex: 0 0 292px;
     }
 
     @include for-size(hd-desktop) {
-      flex: 0 0 328px;
+      flex: 0 0 338px;
     }
 
     &::before {
@@ -103,6 +119,12 @@
       font-size: 14px;
       line-height: 29px;
       font-weight: 500;
+
+      @include for-size(desktop) {
+        font-size: 21px;
+        line-height: 29px;
+      }
+
     }
   }
 
@@ -112,9 +134,18 @@
     line-height: 20px;
     font-weight: 700;
 
+    @include for-size(desktop) {
+      font-size: 18px;
+      line-height: 29px;
+    }
 
-
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+      line-height: 29px;
+    }
   }
+
+
 
 
 }
