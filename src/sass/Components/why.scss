@@ -1,5 +1,4 @@
 .why {
-
   display: block;
   width: 100%;
   height: 100%;
@@ -11,6 +10,8 @@
     padding-top: 68px;
     padding-bottom: 30px;
   }
+
+
 
   &__title {
     color: $secondary-color;
@@ -33,11 +34,17 @@
     z-index: 100;
     background-color: $secondary-color;
     max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 28px;
     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
     counter-reset: why-box;
+
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 688px;
+      justify-content: space-between;
+      padding: 32px 92px 28px 98px;
+    }
   }
 
   &__item {
@@ -45,12 +52,16 @@
     position: relative;
     letter-spacing: 0.7px;
 
+    @include for-size(tablet) {
+      flex: 0 0 218px;
+    }
+
     &::before {
       @include pseudo;
     }
 
     &::after {
-      content: '0' counter(why-box);
+      content: '0'counter(why-box);
       color: $third-color;
       position: absolute;
       top: 1px;
@@ -64,9 +75,15 @@
 
   &__desc {
     padding-top: 20px;
-    padding-bottom: 24px;
+
     font-size: 13px;
     line-height: 20px;
     font-weight: 700;
+
   }
+
+  &__desc:not(:last-child) {
+    padding-bottom: 24px;
+  }
+
 }
