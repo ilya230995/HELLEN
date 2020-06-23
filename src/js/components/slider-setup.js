@@ -20,16 +20,14 @@ $(document).on('ready', function () {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
           slidesToShow: 7,
           arrows: true,
 
           // prevArrow: $('.slider-custom__left-block'),
           // nextArrow: $('.slider-custom__right-block'),
-          // appendArrows: $(
-          //   '.slider-custom__content .slider-custom__content__tablet-arrows',
-          // ),
+          appendArrows: $('.slider-content'),
         },
       },
     ],
