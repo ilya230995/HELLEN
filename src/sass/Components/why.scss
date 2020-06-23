@@ -1,24 +1,22 @@
 .why {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 50px;
+  padding-top: 27px;
   padding-bottom: 10px;
 
 
   @include for-size(tablet) {
-    // padding-top: 38px;
+
     // padding-bottom: 30px;
-    padding-top: 64px;
+    padding-top: 146px;
   }
 
   @include for-size(desktop) {
-    padding-top: 78px;
-    padding-bottom: 30px;
+    padding-top: 26px;
   }
 
   @include for-size(hd-desktop) {
-    padding-top: 120px;
-    padding-bottom: 30px;
+    padding-top: 56px;
   }
 
   &-bg {

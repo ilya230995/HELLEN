@@ -1,23 +1,24 @@
 .programm {
+  text-align: center;
   padding-top: 50px;
-  // padding-bottom: 20px;
+  padding-bottom: 17px;
   background-color: $fourth-color;
   position: relative;
   z-index: 10;
 
   @include for-size(tablet) {
     padding-top: 68px;
-    // padding-bottom: 110px;
+
   }
 
   @include for-size(desktop) {
     padding-top: 82px;
-    // padding-bottom: 24px;
+
   }
 
   @include for-size(hd-desktop) {
     padding-top: 132px;
-    // padding-bottom: 32px;
+
   }
 
   &-wrapper {
@@ -37,7 +38,7 @@
     display: inline-block;
     position: absolute;
     right: 0;
-    bottom: -100px;
+    bottom: -120px;
     background-image: url(../images/mobile/bg-our-program-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@
     @include for-size(tablet) {
       background-image: url(../images/tablet/bg-our-program-tablet.jpg);
       right: 0;
-      bottom: 0px;
+      bottom: -82px;
       width: 406px;
       height: 282px;
     }
@@ -55,7 +56,7 @@
     @include for-size(desktop) {
       background-image: url(../images/laptop-1280/bg-our-program-laptop-1280.jpg);
       left: 0;
-      bottom: -160px;
+      bottom: -176px;
       width: 546px;
       height: 397px;
     }
@@ -63,7 +64,7 @@
     @include for-size(hd-desktop) {
       background-image: url(../images/laptop-1680/bg-our-program-laptop-1680.jpg);
       right: 0;
-      bottom: -278px;
+      bottom: -298px;
       width: 700px;
       height: 485px;
     }
@@ -90,7 +91,7 @@
     line-height: 1.2;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     color: $secondary-color;
 
     @include for-size(tablet) {
@@ -118,7 +119,7 @@
     max-width: 100%;
 
     @include for-size(mobile) {
-      margin-left: 62px;
+      margin-left: 84px;
     }
 
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -152,6 +153,7 @@
 
     &__item {
       position: relative;
+      text-align: left;
       counter-increment: programm-box;
 
       @include for-size(max-desktop) {
@@ -257,8 +259,8 @@
     font-size: 13px;
     line-height: 1.2;
     letter-spacing: 0.65px;
-    margin-top: 26px;
-    margin-bottom: 22px;
+    margin-top: 18px;
+    margin-bottom: 14px;
 
     @include for-size(tablet) {
       margin-top: 28px;
@@ -294,8 +296,6 @@
       line-height: 29px;
     }
 
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+
   }
 }
