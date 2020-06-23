@@ -121,20 +121,21 @@ $slider-bg: #f9f9f9;
     font-size: 20px;
     line-height: 26.5px;
     margin-bottom: 25px;
-  }
-
-  &__tablet-laptop-title {
-    @include for-size(mobile) {
-      display: none;
-    }
     @include for-size(tablet) {
-      margin-bottom: 44px;
-      display: block;
+      font-size: 26px;
+      margin-bottom: 45px;
     }
     @include for-size(desktop) {
       font-size: 42px;
-      margin-bottom: 45px;
+
       font-weight: 600;
+    }
+  }
+
+  //разные title для мобильного и таблеток/десктопов
+  &__tablet-laptop-title {
+    @include for-size(mobile) {
+      display: none;
     }
   }
 
@@ -160,6 +161,8 @@ $slider-bg: #f9f9f9;
     }
 
     @include for-size(tablet) {
+      font-size: 11px;
+      line-height: 20px;
       position: static;
       width: 470px;
       height: auto;
@@ -168,6 +171,7 @@ $slider-bg: #f9f9f9;
       position: static;
       width: 700px;
       font-size: 16.67px;
+      line-height: 29px;
       letter-spacing: 0.85px;
     }
   }
@@ -233,16 +237,12 @@ $slider-bg: #f9f9f9;
     }
   }
 
-  &__person-about,
-  &__person-about-tablet {
+  &__person-about {
     color: $main-color;
+    max-width: 240px;
     font-size: 11px;
     line-height: 20px;
     font-weight: 500;
-  }
-
-  &__person-about {
-    max-width: 240px;
   }
   &__person-education {
     max-width: 240px;
