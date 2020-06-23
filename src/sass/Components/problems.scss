@@ -7,12 +7,10 @@
 
   @include for-size(tablet) {
     padding-top: 64px;
-
   }
 
   @include for-size(desktop) {
     padding-top: 78px;
-
   }
 
   @include for-size(hd-desktop) {
