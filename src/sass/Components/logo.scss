@@ -10,6 +10,11 @@
   color: black;
   align-items: center;
   justify-content: center;
+  &_header {
+    &_active {
+      color: $secondary-color;
+    }
+  }
 
   &__img {
     width: 21px;
