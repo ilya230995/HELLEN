@@ -219,6 +219,9 @@ $slider-bg: #f9f9f9;
   &__read-more {
     text-decoration: underline;
   }
+  &__read-more:visited {
+    @include font-orange;
+  }
 
   &__secondary-title {
     font-size: 13px;
@@ -255,10 +258,6 @@ $slider-bg: #f9f9f9;
       font-size: 12.5px;
       margin-bottom: 28px;
     }
-  }
-
-  &__read-more:visited {
-    @include font-orange;
   }
 
   //социальная иконка
