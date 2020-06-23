@@ -1,23 +1,23 @@
 .programm {
   padding-top: 50px;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   background-color: $fourth-color;
   position: relative;
   z-index: 10;
 
   @include for-size(tablet) {
     padding-top: 68px;
-    padding-bottom: 110px;
+    // padding-bottom: 110px;
   }
 
   @include for-size(desktop) {
     padding-top: 82px;
-    padding-bottom: 24px;
+    // padding-bottom: 24px;
   }
 
   @include for-size(hd-desktop) {
     padding-top: 132px;
-    padding-bottom: 32px;
+    // padding-bottom: 32px;
   }
 
   &-wrapper {
