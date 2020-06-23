@@ -12,6 +12,14 @@
     width: 37px;
     height: 37px;
     margin: 0 auto;
+    position: relative;
+    // position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  &__phone-number {
+    // text-decoration: none;
+    color: $fourth-color;
   }
   &__phone {
     margin-bottom: 25px;
@@ -90,23 +98,25 @@
   .contacts__phone {
     font-size: 28px;
     margin-right: 60px;
+    line-height: 0.7;
   }
   .contacts__logo-wrapper {
     margin: 0;
-    margin-right: 290px;
+    margin-right: 309px;
   }
   .phone-icon {
     width: 40px;
     height: 40px;
     left: -39px;
-    top: 3px;
+    top: 6px;
   }
   .contacts {
-    padding-top: 55px;
+    padding-top: 51px;
     padding-bottom: 55px;
   }
   .site-logo {
     transform: scale(1.7);
+    line-height: 2.2;
   }
   .contacts__phone::after {
     top: 5px;
@@ -114,7 +124,12 @@
   }
   @media (min-width: 1680px) {
     .contacts__logo-wrapper {
-      margin-right: 350px;
+      margin-right: 366px;
+      padding-left: 32px;
+    }
+    .phone-icon {
+      left: -43px;
+      top: 8px;
     }
   }
 }

@@ -1,25 +1,70 @@
 .registration {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(
+      rgba(17, 21, 24, 0.8),
+      rgba(17, 21, 24, 0.8)
+    ),
     url(../images/mobile/bg-registration.png);
   padding-top: 54px;
   padding-bottom: 60px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
   @include for-size(tablet) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    background-image: linear-gradient(
+        rgba(17, 21, 24, 0.8),
+        rgba(17, 21, 24, 0.8)
+      ),
       url(../images/tablet/bg-registration-tablet.png);
-    @media (min-resolution: 192dpi) {
-      .registration {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.8)
-          ),
-          url(../images/tablet/bg-registration-tablet@2x.png);
-      }
+  }
+  @include for-size(desktop) {
+    background-image: linear-gradient(
+        rgba(17, 21, 24, 0.8),
+        rgba(17, 21, 24, 0.8)
+      ),
+      url(../images/laptop-1280/bg-registration-desktop-1280.png);
+
+    padding-top: 74px;
+    padding-bottom: 90px;
+  }
+  @include for-size(hd-desktop) {
+    background-image: linear-gradient(
+        rgba(17, 21, 24, 0.8),
+        rgba(17, 21, 24, 0.8)
+      ),
+      url(../images/laptop-1680/bg-registration-desktop-1680.png);
+
+    padding-top: 120px;
+    padding-bottom: 96px;
+    background-position: top;
+  }
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        rgba(17, 21, 24, 0.8),
+        rgba(17, 21, 24, 0.8)
+      ),
+      url(../images/mobile/bg-registration@2x.png);
+    @include for-size(tablet) {
+      background-image: linear-gradient(
+          rgba(17, 21, 24, 0.8),
+          rgba(17, 21, 24, 0.8)
+        ),
+        url(../images/tablet/bg-registration-tablet@2x.png);
     }
-    padding-top: 56px;
-    padding-bottom: 62px;
+    @include for-size(desktop) {
+      background-image: linear-gradient(
+          rgba(17, 21, 24, 0.8),
+          rgba(17, 21, 24, 0.8)
+        ),
+        url(../images/laptop-1280/bg-registration-desktop-1280@2x.png);
+    }
+    @include for-size(hd-desktop) {
+      background-image: linear-gradient(
+          rgba(17, 21, 24, 0.8),
+          rgba(17, 21, 24, 0.8)
+        ),
+        url(../images/laptop-1680/bg-registration-desktop-1680@2x.png);
+    }
   }
   &__title {
     display: block;
@@ -38,6 +83,16 @@
       letter-spacing: 0.45px;
       margin-bottom: 22px;
     }
+    @include for-size(desktop) {
+      font-size: 38px;
+      width: 929px;
+      line-height: 50.04px;
+      letter-spacing: 0.88px;
+      margin-bottom: 40px;
+    }
+    @include for-size(hd-desktop) {
+      margin-bottom: 60px;
+    }
   }
 
   &__description {
@@ -49,10 +104,23 @@
     text-align: center;
     margin: 0 auto;
     @include for-size(tablet) {
-      width: 455px;
+      width: 460px;
       font-size: 15px;
       text-align: left;
       letter-spacing: 1.8px;
+    }
+    @include for-size(desktop) {
+      width: 532px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 26.5px;
+      letter-spacing: 2px;
+    }
+    @include for-size(hd-desktop) {
+      width: 743px;
+      font-size: 25px;
+      letter-spacing: 2.85px;
+      line-height: 37.5px;
     }
   }
   &__description-wrapper {
@@ -62,6 +130,9 @@
     @include for-size(tablet) {
       margin-bottom: 36px;
     }
+    @include for-size(desktop) {
+      margin-bottom: 50px;
+    }
   }
   &__form-wrapper {
     margin: 0 auto;
@@ -70,9 +141,15 @@
     @include for-size(tablet) {
       margin-bottom: 36px;
     }
+    @include for-size(desktop) {
+      margin-bottom: 58px;
+    }
   }
   &__form-item:not(:last-child) {
     margin-bottom: 20px;
+    @include for-size(desktop) {
+      margin-bottom: 25px;
+    }
   }
   &__form-btn {
     text-align: center;
@@ -88,6 +165,10 @@
     font-size: 13px;
     @include for-size(tablet) {
       width: 400px;
+    }
+    @include for-size(desktop) {
+      width: 620px;
+      height: 72px;
     }
   }
   &__form-input:required:focus {
@@ -106,6 +187,10 @@
     line-height: 37.5px;
     letter-spacing: 0.65px;
     font-family: $main-font;
+    height: 50px;
+    @include for-size(desktop) {
+      font-size: 21px;
+    }
   }
   &__btn {
     width: 246px;
@@ -122,10 +207,20 @@
       width: 250px;
       height: 48px;
     }
+    @include for-size(desktop) {
+      width: 350px;
+      height: 68px;
+      font-size: 14px;
+      letter-spacing: 3.4px;
+    }
   }
-  @include for-size(tablet) {
-    .span_mod {
+
+  .span_mod {
+    @include for-size(tablet) {
       letter-spacing: 2.6px;
+    }
+    @include for-size(hd-desktop) {
+      letter-spacing: 3.2px;
     }
   }
 }
