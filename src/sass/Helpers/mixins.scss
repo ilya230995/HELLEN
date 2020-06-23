@@ -1,4 +1,4 @@
-@mixin font-black ($fs, $fw, $lh) {
+@mixin font-black($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -6,7 +6,7 @@
   color: $fourth-color;
 }
 
-@mixin font-grey ($fs, $fw, $lh) {
+@mixin font-grey($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -14,7 +14,7 @@
   color: $fifth-color;
 }
 
-@mixin font-black-medium ($fs, $fw, $lh) {
+@mixin font-black-medium($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -22,7 +22,7 @@
   color: $fifth-color;
 }
 
-@mixin font-orange ($fs, $fw, $lh) {
+@mixin font-orange($fs: NULL, $fw: NULL, $lh: NULL) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -30,7 +30,7 @@
   color: $third-color;
 }
 
-@mixin secion-title ($fs, $fw, $lh) {
+@mixin secion-title($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -38,7 +38,7 @@
   color: $main-color;
 }
 
-@mixin section-title_white ($fs, $fw, $lh) {
+@mixin section-title_white($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
@@ -47,7 +47,7 @@
 }
 
 @mixin pseudo {
-  content: "";
+  content: '';
   display: block;
   width: 25px;
   height: 2px;
@@ -59,27 +59,19 @@
     @media (max-width: 767px) {
       @content;
     }
-  }
-
-  @else if $size==tablet {
+  } @else if $size==tablet {
     @media (min-width: 768px) {
       @content;
     }
-  }
-
-  @else if $size==max-desktop {
+  } @else if $size==max-desktop {
     @media (max-width: 1279px) {
       @content;
     }
-  }
-
-  @else if $size==desktop {
+  } @else if $size==desktop {
     @media (min-width: 1280px) {
       @content;
     }
-  }
-
-  @else if $size==hd-desktop {
+  } @else if $size==hd-desktop {
     @media (min-width: 1680px) {
       @content;
     }
