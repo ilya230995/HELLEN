@@ -1,0 +1,61 @@
+.guarantee {
+  &__title {
+    text-align: center;
+  }
+  &__wrap {
+    font-size: 11px;
+    line-height: 20px;
+    margin: 0 auto;
+    @include for-size(tablet) {
+      max-width: 688px;
+    }
+    @include for-size(tablet) {
+      max-width: 1210px;
+      background-color: #f9f9f9;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include title-font-size;
+  }
+  &__item:not(:last-child) {
+    padding-bottom: 28px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 37px;
+    &:not(:last-child)::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 1px dotted rgb(186, 186, 186);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 18px;
+      background-image: url('../images/icons/logo.svg');
+      background-repeat: no-repeat;
+      fill: #f1f1f1;
+      top: 0px;
+      left: -5px;
+    }
+  }
+  &__list {
+    padding-top: 25px;
+    padding-bottom: 51px;
+    margin: 0 auto;
+    @include for-size(tablet) {
+      letter-spacing: 0.55px;
+
+      max-width: 550px;
+    }
+    @include for-size(desktop) {
+      font-size: 18px;
+      max-width: 959px;
+    }
+  }
+}

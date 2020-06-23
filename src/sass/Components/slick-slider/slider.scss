@@ -118,16 +118,14 @@ $slider-bg: #f9f9f9;
   &__title {
     text-align: center;
     color: $main-color;
-    font-size: 20px;
+
     line-height: 26.5px;
     margin-bottom: 25px;
+    @include title-font-size;
     @include for-size(tablet) {
-      font-size: 26px;
       margin-bottom: 45px;
     }
     @include for-size(desktop) {
-      font-size: 42px;
-
       font-weight: 600;
     }
   }

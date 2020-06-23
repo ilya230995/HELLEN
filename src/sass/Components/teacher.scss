@@ -1,0 +1,114 @@
+.teacher {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  font-size: 11px;
+  margin-bottom: 60px;
+  padding-top: 24px;
+  @include for-size(tablet) {
+    flex-direction: row;
+  }
+
+  &__title {
+    @include title-font-size;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  &__cover {
+    margin-bottom: 28px;
+    @include for-size(tablet) {
+      min-width: 290px;
+    }
+    @include for-size(desktop) {
+      min-width: 580px;
+    }
+  }
+  &__name {
+    font-size: 16px;
+    line-height: 29px;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.38);
+    margin-bottom: 25px;
+    width: 90%;
+
+    @include for-size(tablet) {
+      margin-top: 55px;
+      font-size: 20px;
+    }
+    @include for-size(desktop) {
+      font-size: 29px;
+      padding-bottom: 10px;
+    }
+  }
+  &__experience-list {
+    margin-bottom: 65px;
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      text-align: left;
+    }
+  }
+  &__experience-item {
+    display: flex;
+    font-size: 13px;
+    line-height: 20px;
+
+    align-items: flex-end;
+    padding-left: 35px;
+    position: relative;
+    &::before {
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 25px;
+      background-image: url('../images/icons/checkmark.svg');
+      background-repeat: no-repeat;
+    }
+
+    @include for-size(tablet) {
+      font-weight: 500;
+    }
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+  &__experience-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__experience-text-wrap {
+    position: relative;
+    padding-left: 15px;
+    &::before {
+      position: absolute;
+      top: -20px;
+      left: 15px;
+      @include pseudo;
+    }
+    @include for-size(desktop) {
+      padding-left: 0;
+      &::before {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        @include pseudo;
+      }
+    }
+  }
+  &__experience-text {
+    display: block;
+    margin-top: 22px;
+    color: $fifth-color;
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+  &__link {
+    display: block;
+    margin-top: 26px;
+    @include font-orange;
+  }
+}
