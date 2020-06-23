@@ -1,12 +1,23 @@
 .why {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+  padding-top: 50px;
   padding-bottom: 10px;
 
 
   @include for-size(tablet) {
-    padding-top: 38px;
+    // padding-top: 38px;
+    // padding-bottom: 30px;
+    padding-top: 64px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 78px;
+    padding-bottom: 30px;
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: 120px;
     padding-bottom: 30px;
   }
 
@@ -144,8 +155,4 @@
       line-height: 29px;
     }
   }
-
-
-
-
 }

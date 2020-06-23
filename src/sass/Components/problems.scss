@@ -1,5 +1,23 @@
 .problems {
-  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+
+  @include for-size(tablet) {
+    padding-top: 64px;
+
+  }
+
+  @include for-size(desktop) {
+    padding-top: 78px;
+
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: 120px;
+  }
 
   &__bg {
     background: linear-gradient($fourth-color 518px, $secondary-color 518px);
@@ -7,24 +25,21 @@
 
   @include for-size(tablet) {
     background: url(../images/tablet/bg-main-program-tablet.jpg),
-      linear-gradient($fourth-color 334px,
-        $secondary-color 334px);
+      linear-gradient($fourth-color 334px, $secondary-color 334px);
     background-repeat: no-repeat;
     background-position: right 0;
   }
 
   @include for-size(desktop) {
     background: url(../images/laptop-1280/bg-main-program-laptop-1280.jpg),
-      linear-gradient($fourth-color 528px,
-        $secondary-color 528px);
+      linear-gradient($fourth-color 528px, $secondary-color 528px);
     background-repeat: no-repeat;
     background-position: right 0;
   }
 
   @include for-size(hd-desktop) {
     background: url(../images/laptop-1680/bg-main-program-laptop-1680.jpg),
-      linear-gradient($fourth-color 562px,
-        $secondary-color 562px);
+      linear-gradient($fourth-color 562px, $secondary-color 562px);
     background-repeat: no-repeat;
     background-position: right 0;
   }
@@ -59,105 +74,3 @@
     }
   }
 }
-
-
-
-
-// .why {
-//   background-color: black;
-//   background-position: contain;
-
-//   &__list {
-//     background-color: $secondary-color;
-
-//     // width: 80%;
-//     padding: 28px;
-//     box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
-//     counter-reset: why-box;
-//   }
-
-//   &__item {
-//     counter-increment: why-box;
-//     position: relative;
-//     letter-spacing: 0.7px;
-
-//     &::before {
-//       @include pseudo;
-//     }
-
-//     &::after {
-//       content: '0'counter(why-box);
-//       color: $third-color;
-//       position: absolute;
-//       top: 0;
-//       left: 36px;
-//       transform: translateY(-50%);
-//       font-size: 14px;
-//       line-height: 29.17px;
-//       font-weight: 500;
-//     }
-//   }
-
-//   &__desc {
-//     font-size: 13px;
-//     line-height: 20px;
-//     font-weight: 700;
-//     padding-top: 20px;
-//     padding-bottom: 24px;
-//   }
-// }
-
-// .problems {
-//   color: $secondary-color;
-
-//   &__title {
-//     color: $secondary-color;
-//     font-size: 20px;
-//     line-height: 30px;
-//     letter-spacing: 1px;
-//     font-weight: 800;
-//   }
-
-//   &__title--color {
-//     color: $third-color;
-//   }
-// }
-
-// @media screen and (min-width: 768px) {
-//   .why {
-//     background-image: url('../images/icons/fire.svg');
-
-//     &__list {
-//       display: flex;
-//       flex-wrap: wrap;
-//       justify-content: space-evenly;
-//     }
-
-//     &__item {
-//       width: 240px;
-//     }
-//   }
-
-//   .problems__title {
-//     padding-top: 65px;
-//     padding-bottom: 25px;
-//     width: 430px;
-//     font-size: 26px;
-//   }
-// }
-
-// @media screen and (min-width: 1280px) {
-//   .why {
-//     background-image: url('../images/icons/fire.svg');
-
-//     &__list {
-//       display: flex;
-//       flex-wrap: wrap;
-//       justify-content: space-evenly;
-//     }
-
-//     &__item {
-//       width: 310px;
-//     }
-//   }
-// }
