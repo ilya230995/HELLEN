@@ -151,6 +151,9 @@
       margin-bottom: 25px;
     }
   }
+  // &__form-item {
+  //   font-size: 15px;
+  // }
   &__form-btn {
     text-align: center;
   }
@@ -162,13 +165,15 @@
     padding-left: 22px;
     font-family: $main-font;
     color: $secondary-color;
-    font-size: 13px;
+    font-size: 16px;
     @include for-size(tablet) {
       width: 400px;
+      font-size: 18px;
     }
     @include for-size(desktop) {
       width: 620px;
       height: 72px;
+      font-size: 26px;
     }
   }
   &__form-input:required:focus {
@@ -188,8 +193,11 @@
     letter-spacing: 0.65px;
     font-family: $main-font;
     height: 50px;
+    @include for-size(tablet) {
+      font-size: 18px;
+    }
     @include for-size(desktop) {
-      font-size: 21px;
+      font-size: 26px;
     }
   }
   &__btn {
