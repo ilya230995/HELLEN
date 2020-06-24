@@ -1,17 +1,32 @@
+$guarantee-bg: #f1f1f1;
+
 .guarantee {
+  &__grey-bg-mobile {
+    @include for-size(mobile) {
+      background-color: $guarantee-bg;
+    }
+  }
+
   &__title {
     text-align: center;
+    display: block;
   }
   &__wrap {
+    max-width: 688px;
     font-size: 11px;
     line-height: 20px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $guarantee-bg;
+    padding-top: 25px;
+
     @include for-size(tablet) {
       max-width: 688px;
     }
     @include for-size(tablet) {
       max-width: 1210px;
-      background-color: #f9f9f9;
     }
   }
   &__title {
@@ -39,18 +54,15 @@
       height: 18px;
       background-image: url('../images/icons/logo.svg');
       background-repeat: no-repeat;
-      fill: #f1f1f1;
       top: 0px;
       left: -5px;
     }
   }
   &__list {
-    padding-top: 25px;
-    padding-bottom: 51px;
-    margin: 0 auto;
+    padding-bottom: 30px;
     @include for-size(tablet) {
       letter-spacing: 0.55px;
-
+      padding-bottom: 51px;
       max-width: 550px;
     }
     @include for-size(desktop) {
