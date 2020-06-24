@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-size: 11px;
+    font-size: 0.6875rem;
     @include for-size(tablet) {
       flex-direction: row;
     }
@@ -21,6 +21,7 @@
       margin-bottom: 50px;
     }
   }
+
   &__cover {
     margin-bottom: 26px;
     @include for-size(tablet) {
@@ -31,7 +32,7 @@
     }
   }
   &__name {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 30px;
     border-bottom: 1px solid rgba(133, 133, 133, 0.38);
     margin-bottom: 25px;
@@ -39,10 +40,10 @@
 
     @include for-size(tablet) {
       margin-top: 72px;
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     @include for-size(desktop) {
-      font-size: 29px;
+      font-size: 1.8125rem;
       padding-bottom: 10px;
     }
   }
@@ -58,7 +59,7 @@
   }
   &__experience-item {
     display: flex;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 20px;
     align-items: flex-end;
     padding-left: 35px;
@@ -78,7 +79,7 @@
       font-weight: 500;
     }
     @include for-size(desktop) {
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
   &__experience-item:not(:last-child) {
@@ -108,7 +109,7 @@
     margin-top: 22px;
     color: $fifth-color;
     @include for-size(desktop) {
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
   &__link {
