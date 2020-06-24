@@ -1,5 +1,5 @@
 // цвета
-$slider-bg: #f9f9f9;
+$slider-bg: rgba(251, 251, 251, 0.8);
 
 //обертка слайдера
 .slider-wrap {
@@ -12,7 +12,6 @@ $slider-bg: #f9f9f9;
 .slider-content {
   box-shadow: 4px 6.928px 11.04px 1px rgba(29, 29, 27, 0.09);
   margin: 0 auto 17px auto;
-
   @include for-size(tablet) {
     max-width: 688px;
     margin: 0 auto 25px auto;
@@ -31,7 +30,6 @@ $slider-bg: #f9f9f9;
   justify-content: center;
   max-width: 180px;
   margin: 0 auto;
-
   @include for-size(tablet) {
     max-width: 508px;
   }
@@ -45,7 +43,6 @@ $slider-bg: #f9f9f9;
     }
 
     @include for-size(tablet) {
-      // padding-top: 46px;
       min-width: 161px;
       display: flex;
       justify-content: flex-start;
@@ -90,8 +87,7 @@ $slider-bg: #f9f9f9;
   &__content {
     font-family: $main-font;
     margin: 0 auto;
-    // padding-top: 22px;
-    // padding-bottom: 34px;
+
     background-color: $secondary-color;
     display: flex;
     flex-direction: column;

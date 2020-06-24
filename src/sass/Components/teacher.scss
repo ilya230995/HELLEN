@@ -1,23 +1,28 @@
 .teacher {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  font-size: 11px;
   margin-bottom: 60px;
-  padding-top: 24px;
-  @include for-size(tablet) {
-    flex-direction: row;
+  padding-top: 58px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 11px;
+    @include for-size(tablet) {
+      flex-direction: row;
+    }
   }
 
   &__title {
     @include title-font-size;
     line-height: 30px;
     margin-bottom: 30px;
+    @include for-size(tablet) {
+      margin-bottom: 50px;
+    }
   }
   &__cover {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     @include for-size(tablet) {
       min-width: 290px;
     }
@@ -27,13 +32,13 @@
   }
   &__name {
     font-size: 16px;
-    line-height: 29px;
+    line-height: 30px;
     border-bottom: 1px solid rgba(133, 133, 133, 0.38);
     margin-bottom: 25px;
     width: 90%;
 
     @include for-size(tablet) {
-      margin-top: 55px;
+      margin-top: 72px;
       font-size: 20px;
     }
     @include for-size(desktop) {
@@ -43,6 +48,7 @@
   }
   &__experience-list {
     margin-bottom: 65px;
+    font-weight: 500;
     @include for-size(tablet) {
       display: flex;
       flex-direction: column;
@@ -54,7 +60,6 @@
     display: flex;
     font-size: 13px;
     line-height: 20px;
-
     align-items: flex-end;
     padding-left: 35px;
     position: relative;
