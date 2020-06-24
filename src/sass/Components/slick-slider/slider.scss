@@ -16,7 +16,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
     max-width: 688px;
     margin: 0 auto 25px auto;
   }
-
   @include for-size(desktop) {
     max-width: 1070px;
     margin: 0 auto 40px auto;
@@ -86,8 +85,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
 
   &__content {
     font-family: $main-font;
-    margin: 0 auto;
-
     background-color: $secondary-color;
     display: flex;
     flex-direction: column;
@@ -106,7 +103,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
       display: flex;
       flex-direction: row;
       justify-content: start;
-      background-color: white;
     }
   }
 
@@ -114,7 +110,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
   &__title {
     text-align: center;
     color: $main-color;
-
     line-height: 26.5px;
     margin-bottom: 25px;
     @include title-font-size;
@@ -139,6 +134,7 @@ $slider-bg: rgba(251, 251, 251, 0.8);
     }
   }
 
+  // about  для мобильного
   &__person-about {
     @include for-size(tablet) {
       width: 0;
@@ -176,12 +172,9 @@ $slider-bg: rgba(251, 251, 251, 0.8);
     border: none;
   }
 
+  &__image-responsive,
   &__image {
-    width: 100%;
-    height: auto;
-  }
-
-  &__image-responsive {
+    border-radius: 50%;
     width: 80px;
     height: 80px;
     margin-bottom: 21px;
@@ -202,6 +195,7 @@ $slider-bg: rgba(251, 251, 251, 0.8);
     width: 55px;
     height: 55px;
     margin: 0 auto;
+    border-radius: 50%;
   }
 
   //slider контент
@@ -230,7 +224,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
     &__secondary-title {
       margin-bottom: 23px;
       font-size: 25px;
-      // margin-top: 48px;
     }
   }
 
@@ -258,7 +251,6 @@ $slider-bg: rgba(251, 251, 251, 0.8);
   &__vk-icon {
     width: 18px;
     height: 14px;
-    fill: #436eab;
     margin-bottom: 11px;
     @include for-size(tablet) {
       width: 25px;
