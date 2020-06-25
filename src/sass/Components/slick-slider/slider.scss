@@ -37,6 +37,10 @@ $slider-bg: rgba(251, 251, 251, 0.8);
   }
 
   &__left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     @include for-size(mobile) {
       margin-top: 22px;
     }
@@ -45,18 +49,13 @@ $slider-bg: rgba(251, 251, 251, 0.8);
       min-width: 161px;
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: flex-center;
     }
     @include for-size(desktop) {
       width: 266px;
     }
   }
-  &__left-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
+
   &__left-block,
   &__right-block {
     @include for-size('tablet') {
