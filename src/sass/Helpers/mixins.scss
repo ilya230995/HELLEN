@@ -22,7 +22,7 @@
   color: $fifth-color;
 }
 
-@mixin font-orange($fs: NULL, $fw: NULL, $lh: NULL) {
+@mixin font-orange($fs, $fw, $lh) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;

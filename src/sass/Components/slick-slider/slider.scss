@@ -201,14 +201,14 @@ $slider-bg: rgba(251, 251, 251, 0.8);
   //slider контент
   &__secondary-title,
   &__read-more {
-    @include font-orange;
+    color: $third-color;
   }
 
   &__read-more {
     text-decoration: underline;
   }
   &__read-more:visited {
-    @include font-orange;
+    color: $third-color;
   }
 
   &__secondary-title {
