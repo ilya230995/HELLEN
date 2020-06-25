@@ -6,18 +6,22 @@ window.addEventListener('DOMContentLoaded', () => {
     logo = document.querySelector('.site-logo_header');
 
     hamburger.addEventListener('click', () => {
-        menu.classList.toggle('menu-list_active');
-        hamburger.classList.toggle('hamburger_active');
-        modal.classList.toggle('modal-btn_white_active');
-        logo.classList.toggle('site-logo_header_active');
+        if (window.screen.width < 1280) {
+            menu.classList.toggle('menu-list_active');
+            hamburger.classList.toggle('hamburger_active');
+            modal.classList.toggle('modal-btn_white_active');
+            logo.classList.toggle('site-logo_header_active');
+        }
 });
 
-    // menuItem.forEach(item => {
-    //     item.addEventListener('click', () => {         
-    //         menu.classList.toggle('menu-list_active');
-    //         hamburger.classList.toggle('hamburger_active');
-    //         modal.classList.toggle('modal-btn_white_active');
-    //         logo.classList.toggle('site-logo_header_active');
-    //     })
-    // })
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {   
+            if (window.screen.width < 1280) {      
+                menu.classList.toggle('menu-list_active');
+                hamburger.classList.toggle('hamburger_active');
+                modal.classList.toggle('modal-btn_white_active');
+                logo.classList.toggle('site-logo_header_active');
+            }
+        })
+    })
 })
