@@ -115,6 +115,6 @@
   &__link {
     display: block;
     margin-top: 26px;
-    @include font-orange;
+    color: $third-color;
   }
 }
