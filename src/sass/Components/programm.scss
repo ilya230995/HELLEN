@@ -1,0 +1,301 @@
+.programm {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 17px;
+  background-color: $fourth-color;
+  position: relative;
+  z-index: 10;
+
+  @include for-size(tablet) {
+    padding-top: 68px;
+
+  }
+
+  @include for-size(desktop) {
+    padding-top: 82px;
+
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: 132px;
+
+  }
+
+  &-wrapper {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-size(desktop) {
+      max-width: 100%;
+      border-top: 2px solid $fifth-color;
+    }
+
+    @include for-size(hd-desktop) {}
+  }
+
+  &-img {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -120px;
+    background-image: url(../images/mobile/bg-our-program-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 143px;
+    height: 172px;
+
+    @include for-size(tablet) {
+      background-image: url(../images/tablet/bg-our-program-tablet.jpg);
+      right: 0;
+      bottom: -82px;
+      width: 406px;
+      height: 282px;
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/laptop-1280/bg-our-program-laptop-1280.jpg);
+      left: 0;
+      bottom: -176px;
+      width: 546px;
+      height: 397px;
+    }
+
+    @include for-size(hd-desktop) {
+      background-image: url(../images/laptop-1680/bg-our-program-laptop-1680.jpg);
+      right: 0;
+      bottom: -298px;
+      width: 700px;
+      height: 485px;
+    }
+
+    @media (min-resolution: 192dpi) {
+      background-image: url(../images/mobile/bg-our-program-mobile@2x.jpg);
+
+      @include for-size(tablet) {
+        background-image: url(../images/tablet/bg-our-program-tablet@2x.jpg);
+      }
+
+      @include for-size(desktop) {
+        background-image: url(../images/laptop-1280/bg-our-program-laptop-1280@2x.jpg);
+      }
+
+      @include for-size(hd-desktop) {
+        background-image: url(../images/laptop-1680/bg-our-program-laptop-1680@2x.jpg);
+      }
+    }
+  }
+
+  &-title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+    color: $secondary-color;
+
+    @include for-size(tablet) {
+      font-size: 26px;
+      letter-spacing: 1.3px;
+      margin-bottom: 58px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 42px;
+      letter-spacing: 2.1px;
+      margin-bottom: 50px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 46px;
+      letter-spacing: 2.3px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &-list {
+    position: relative;
+    counter-reset: programm-box;
+    max-width: 100%;
+
+    @include for-size(mobile) {
+      margin-left: 84px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+      margin-left: 90px;
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 93%;
+      left: -1px;
+      top: 14px;
+      background-color: $fifth-color;
+
+      @include for-size(tablet) {
+        height: 88%;
+      }
+
+      @include for-size(desktop) {
+        display: none;
+      }
+
+
+    }
+
+    &__item {
+      position: relative;
+      text-align: left;
+      counter-increment: programm-box;
+
+      @include for-size(max-desktop) {
+        padding-left: 30px;
+      }
+
+      @include for-size(desktop) {
+        margin-top: 46px;
+      }
+
+      @include for-size(hd-desktop) {
+        margin-top: 68px;
+      }
+
+      &:not(:last-child) {
+        @include for-size(mobile) {
+          padding-bottom: 36px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+          padding-bottom: 40px;
+        }
+
+        @include for-size(desktop) {
+          width: 230px;
+        }
+
+        @include for-size(hd-desktop) {
+          width: 260px;
+        }
+      }
+
+      &::before {
+        content: counter(programm-box) ' семестр';
+        color: $secondary-color;
+        font-size: 14px;
+        letter-spacing: 1.65px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 26px;
+
+        @include for-size(desktop) {
+          font-size: 19px;
+          letter-spacing: 2.09px;
+        }
+
+        @include for-size(hd-desktop) {
+          font-size: 21px;
+          letter-spacing: 2.3px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        border-radius: 50%;
+        background-color: $third-color;
+        width: 10px;
+        height: 10px;
+        transform: translateX(-50%);
+
+        @include for-size(desktop) {
+          top: -54px;
+          left: 8px;
+          width: 17px;
+          height: 17px;
+        }
+
+        @include for-size(hd-desktop) {
+          top: -77px;
+        }
+      }
+    }
+  }
+}
+
+.semestr-list {
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  @include for-size(desktop) {
+    flex-direction: column;
+  }
+
+  &__item {
+    @media (min-width: 768px) and (max-width: 1279px) {
+      flex: 0 0 152px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media (min-width: 768px) and (max-width: 1279px) {
+      margin-right: 28px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: 0.65px;
+    margin-top: 18px;
+    margin-bottom: 14px;
+
+    @include for-size(tablet) {
+      margin-top: 28px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 18px;
+      letter-spacing: 0.9px;
+      margin-top: 44px;
+      margin-bottom: 20px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+      letter-spacing: 1px;
+      margin-top: 34px;
+    }
+
+    &::before {
+      @include pseudo;
+      margin-right: 12px;
+    }
+  }
+
+  &__desc {
+    font-size: 11px;
+    line-height: 20px;
+    color: $fifth-color;
+    opacity: 50%;
+
+    @include for-size(desktop) {
+      font-size: 19px;
+      line-height: 29px;
+    }
+
+
+  }
+}

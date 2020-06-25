@@ -6,9 +6,22 @@
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 11px;
-    line-height: 110px;
-    letter-spacing: 130px;
     &_white {
-        background-color: none;
+        @media (min-width: 1280px) {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
     }
-}
+    @media (min-width: 1280px) {
+        width: 304px;
+        height: 72px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    @media (min-width: 1680px) {
+        font-size: 14px;
+        width: 354px;
+        letter-spacing: 3px;
+
+    }
+}  

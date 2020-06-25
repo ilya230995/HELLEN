@@ -1,0 +1,73 @@
+$guarantee-bg: #f1f1f1;
+
+.guarantee {
+  &__grey-bg-mobile {
+    @include for-size(mobile) {
+      background-color: $guarantee-bg;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    display: block;
+  }
+  &__wrap {
+    max-width: 688px;
+    font-size: 0.6875rem;
+    line-height: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $guarantee-bg;
+    padding-top: 25px;
+
+    @include for-size(tablet) {
+      max-width: 688px;
+    }
+    @include for-size(tablet) {
+      max-width: 1210px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include title-font-size;
+  }
+  &__item:not(:last-child) {
+    padding-bottom: 28px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 37px;
+    &:not(:last-child)::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 1px dotted rgb(186, 186, 186);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 18px;
+      background-image: url('../images/icons/logo.svg');
+      background-repeat: no-repeat;
+      top: 0px;
+      left: -5px;
+    }
+  }
+  &__list {
+    padding-bottom: 30px;
+    @include for-size(tablet) {
+      letter-spacing: 0.55px;
+      padding-bottom: 51px;
+      max-width: 550px;
+    }
+    @include for-size(desktop) {
+      font-size: 1.125rem;
+      max-width: 959px;
+    }
+  }
+}

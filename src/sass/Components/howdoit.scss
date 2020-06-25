@@ -1,0 +1,232 @@
+.howdoit {
+  padding-top: 32px;
+  padding-bottom: 52px;
+  @include for-size(tablet) {
+    padding-bottom: 26px;
+  }
+  @include for-size(hd-desktop) {
+    padding-bottom: 90px;
+  }
+
+  &__maintitle {
+    font-family: $main-font;
+    font-weight: 800;
+    font-size: 20px;
+    color: #18191d;
+    line-height: 1.65;
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    @include for-size(tablet) {
+      font-size: 26px;
+    }
+
+    @include for-size(desktop) {
+      font-size: 42px;
+      text-align: left;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 46px;
+      letter-spacing: 2.29px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @include for-size(tablet) {
+      margin: 0 auto;
+      width: 602px;
+    }
+
+    @include for-size(desktop) {
+      width: 1210px;
+    }
+
+    @include for-size(hd-desktop) {
+      width: 1340px;
+    }
+  }
+  &__element:not(:last-child) {
+    margin-bottom: 16px;
+    @include for-size(tablet) {
+      margin-bottom: 22px;
+    }
+    @include for-size(hd-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__element {
+    width: 290px;
+    height: 268px;
+    justify-content: center;
+
+    background-color: white;
+    box-shadow: 0 0 20px 12px #e9e9e9;
+    padding: 22px;
+
+    @include for-size(tablet) {
+    }
+
+    @include for-size(desktop) {
+      width: 390px;
+      height: 340px;
+    }
+
+    @include for-size(hd-desktop) {
+      width: 430px;
+      height: 396px;
+    }
+  }
+
+  &__element:hover {
+    background-color: #ff6b08;
+    fill: white;
+  }
+
+  &__element:hover .howdoit__icon {
+    fill: white;
+    background-color: #ff6b08;
+  }
+
+  &__element:hover .howdoit__title::after {
+    border-color: white;
+  }
+
+  &__element:hover .howdoit__title,
+  &__element:hover .howdoit__text {
+    color: white;
+  }
+
+  &__title {
+    font-size: 13px;
+    font-family: $main-font;
+    color: rgb(17, 21, 23);
+    font-weight: 700;
+    line-height: 1.538;
+    text-align: center;
+    letter-spacing: 0.65px;
+
+    @include for-size(tablet) {
+    }
+
+    @include for-size(desktop) {
+      font-size: 18px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+      line-height: 1.4;
+    }
+  }
+
+  &__title::after {
+    @include pseudo;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    font-size: 11px;
+    font-family: $main-font;
+    color: rgb(133, 133, 133);
+    line-height: 1.818;
+    text-align: center;
+    letter-spacing: 0.55px;
+
+    @include for-size(tablet) {
+    }
+
+    @include for-size(desktop) {
+      font-size: 15px;
+      letter-spacing: 0.75px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 18.75px;
+      line-height: 1.667;
+    }
+  }
+
+  &__icon {
+    display: block;
+    fill: #ff6b08;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+
+    &_study {
+      width: 52px;
+      height: 55px;
+      @include for-size(hd-desktop) {
+        width: 62px;
+        height: 65px;
+      }
+    }
+
+    &_mobile {
+      width: 54px;
+      height: 55px;
+      @include for-size(hd-desktop) {
+        width: 64px;
+        height: 65px;
+      }
+    }
+
+    &_book {
+      width: 50px;
+      height: 56px;
+      @include for-size(hd-desktop) {
+        width: 60px;
+        height: 66px;
+      }
+    }
+
+    &_global {
+      width: 54px;
+      height: 55px;
+      @include for-size(hd-desktop) {
+        width: 64px;
+        height: 65px;
+      }
+    }
+
+    &_female {
+      width: 49px;
+      height: 55px;
+      @include for-size(hd-desktop) {
+        width: 59px;
+        height: 65px;
+      }
+    }
+
+    &_audio {
+      width: 50px;
+      height: 53px;
+      @include for-size(hd-desktop) {
+        width: 60px;
+        height: 63px;
+      }
+    }
+  }
+}
+.howdoit__element:nth-last-child(2) {
+  @include for-size(tablet) {
+    margin-bottom: 0px;
+  }
+}
+.howdoit__element:nth-last-child(3) {
+  @include for-size(desktop) {
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,156 @@
+.why {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 27px;
+  padding-bottom: 10px;
+
+
+  @include for-size(tablet) {
+
+    // padding-bottom: 30px;
+    padding-top: 146px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 26px;
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: 56px;
+  }
+
+  &-bg {
+    background: linear-gradient($fourth-color 322px, $secondary-color 322px);
+  }
+
+  &__span {
+    @include for-size(mobile) {
+      max-width: 142px;
+    }
+
+    @include for-size(tablet) {
+      text-align: center;
+    }
+
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    color: $secondary-color;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin-bottom: 18px;
+
+    @include for-size(tablet) {
+      font-size: 26px;
+      line-height: 33px;
+    }
+
+    @include for-size(desktop) {
+      position: relative;
+      font-size: 42px;
+      line-height: 56px;
+      z-index: 100;
+      margin-bottom: 36px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 46px;
+      line-height: 62px;
+    }
+
+  }
+
+  &__list {
+
+    position: relative;
+    z-index: 100;
+    background-color: $secondary-color;
+    max-width: 280px;
+    padding: 28px;
+    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    counter-reset: why-box;
+
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 688px;
+      justify-content: space-between;
+      padding: 32px 92px 28px 98px;
+    }
+
+    @include for-size(desktop) {
+      max-width: 100%;
+      padding: 62px 90px 78px 100px;
+    }
+
+    @include for-size(hd-desktop) {
+      max-width: 100%;
+      padding: 78px 108px 56px 98px;
+    }
+  }
+
+  &__item {
+    counter-increment: why-box;
+    position: relative;
+    letter-spacing: 0.7px;
+
+    &:not(:last-child) {
+      padding-bottom: 24px;
+    }
+
+    @include for-size(tablet) {
+      flex: 0 0 218px;
+    }
+
+    @include for-size(desktop) {
+      flex: 0 0 292px;
+    }
+
+    @include for-size(hd-desktop) {
+      flex: 0 0 338px;
+    }
+
+    &::before {
+      @include pseudo;
+    }
+
+    &::after {
+      content: '0'counter(why-box);
+      color: $third-color;
+      position: absolute;
+      top: 1px;
+      left: 36px;
+      transform: translateY(-50%);
+      font-size: 14px;
+      line-height: 29px;
+      font-weight: 500;
+
+      @include for-size(desktop) {
+        font-size: 21px;
+        line-height: 29px;
+      }
+
+    }
+  }
+
+  &__desc {
+    padding-top: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+
+    @include for-size(desktop) {
+      font-size: 18px;
+      line-height: 29px;
+    }
+
+    @include for-size(hd-desktop) {
+      font-size: 21px;
+      line-height: 29px;
+    }
+  }
+}

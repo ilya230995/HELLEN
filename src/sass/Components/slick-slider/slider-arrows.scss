@@ -1,0 +1,38 @@
+//customize slider arrows
+.slick-arrow {
+  z-index: 10;
+}
+
+.slick {
+  @include for-size(tablet) {
+    &-prev {
+      left: -15px;
+    }
+    &-next {
+      right: -10px;
+    }
+    &-prev::before,
+    &-next::before {
+      font-size: 28px;
+    }
+  }
+  @include for-size(desktop) {
+    &-prev {
+      left: -51px;
+    }
+    &-next {
+      right: -39px;
+    }
+    &-prev::before,
+    &-next::before {
+      font-size: 32px;
+    }
+  }
+
+  @include for-size(hd-desktop) {
+    .slick-prev::before,
+    .slick-next::before {
+      font-size: 32px;
+    }
+  }
+}

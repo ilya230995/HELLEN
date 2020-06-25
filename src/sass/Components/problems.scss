@@ -1,0 +1,74 @@
+.problems {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
+
+
+  @include for-size(tablet) {
+    padding-top: 64px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 78px;
+  }
+
+  @include for-size(hd-desktop) {
+    padding-top: 120px;
+  }
+
+  &__bg {
+    background: linear-gradient($fourth-color 518px, $secondary-color 518px);
+  }
+
+  @include for-size(tablet) {
+    background: url(../images/tablet/bg-main-program-tablet.jpg),
+      linear-gradient($fourth-color 334px, $secondary-color 334px);
+    background-repeat: no-repeat;
+    background-position: right 0;
+  }
+
+  @include for-size(desktop) {
+    background: url(../images/laptop-1280/bg-main-program-laptop-1280.jpg),
+      linear-gradient($fourth-color 528px, $secondary-color 528px);
+    background-repeat: no-repeat;
+    background-position: right 0;
+  }
+
+  @include for-size(hd-desktop) {
+    background: url(../images/laptop-1680/bg-main-program-laptop-1680.jpg),
+      linear-gradient($fourth-color 562px, $secondary-color 562px);
+    background-repeat: no-repeat;
+    background-position: right 0;
+  }
+
+  &__wrapper {
+    max-width: 234px;
+
+    @include for-size(tablet) {
+      max-width: 456px;
+    }
+
+    @include for-size(desktop) {
+      max-width: 1210px;
+    }
+  }
+
+  &__span {
+    @include for-size(mobile) {
+      display: block;
+    }
+
+    &_tab {
+      @include for-size(tablet) {
+        display: block;
+      }
+    }
+
+    &_item {
+      @media (min-width: 768px) and (max-width: 1279px) {
+        display: block;
+      }
+    }
+  }
+}

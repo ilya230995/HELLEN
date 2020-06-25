@@ -9,7 +9,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # build artifacts
-build/
+# build/
 
 # Runtime data
 pids
@@ -62,3 +62,4 @@ typings/
 
 # dotenv environment variables file
 .env
+.DS_Store

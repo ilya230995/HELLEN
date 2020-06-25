@@ -3,14 +3,33 @@
  */
 
 @import 'normalize.scss';
+@import './Helpers/variables';
 @import 'base.scss';
 @import './Helpers/fonts';
-@import './Helpers/variables';
 @import './Helpers/mixins';
+
+@import './Components/header';
+@import './Components/problems';
 
 @import './Components/container.scss';
 @import './Components/modal-btn';
-@import './Components/text-br.scss';
+
+@import './Components/span';
+@import './Components/logo';
+@import './Components/why';
+
+@import './Components/teacher';
+@import './Components/guarantee';
+
+@import './Components/slick-slider/slick';
+@import './Components/slick-slider/slick-theme';
+@import './Components/slick-slider/slider';
+@import './Components/slick-slider/slider-arrows';
+
+@import './Components/programm';
+@import './Components/registration.scss';
+@import './Components/contacts.scss';
+@import './Components/footer.scss';
 
 
-@import './Sections/header.scss';
+@import './Components/howdoit';

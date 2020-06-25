@@ -1,0 +1,260 @@
+// цвета
+$slider-bg: rgba(251, 251, 251, 0.8);
+
+//обертка слайдера
+.slider-wrap {
+  background-color: $slider-bg;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+
+//обертка контента слайдера
+.slider-content {
+  box-shadow: 4px 6.928px 11.04px 1px rgba(29, 29, 27, 0.09);
+  margin: 0 auto 17px auto;
+  @include for-size(tablet) {
+    max-width: 688px;
+    margin: 0 auto 25px auto;
+  }
+  @include for-size(desktop) {
+    max-width: 1070px;
+    margin: 0 auto 40px auto;
+  }
+}
+
+//содержимое слайдера
+.slider-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 180px;
+  margin: 0 auto;
+  @include for-size(tablet) {
+    max-width: 508px;
+  }
+  @include for-size(desktop) {
+    max-width: 600px;
+  }
+
+  &__left-block {
+    @include for-size(mobile) {
+      margin-top: 22px;
+    }
+
+    @include for-size(tablet) {
+      min-width: 161px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    @include for-size(desktop) {
+      width: 266px;
+    }
+  }
+  &__left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  &__left-block,
+  &__right-block {
+    @include for-size('tablet') {
+      margin-top: 46px;
+    }
+  }
+  &__right-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include for-size(tablet) {
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      margin-bottom: 48px;
+    }
+    @include for-size(desktop) {
+      width: 700px;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    font-family: $main-font;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: none;
+    text-align: center;
+
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include for-size(desktop) {
+      max-width: 1070px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
+
+  //title
+  &__title {
+    text-align: center;
+    color: $main-color;
+    line-height: 26.5px;
+    margin-bottom: 25px;
+    @include title-font-size;
+    @include for-size(tablet) {
+      margin-bottom: 45px;
+    }
+    @include for-size(desktop) {
+      font-weight: 600;
+    }
+  }
+
+  //разные title для мобильного и таблеток/десктопов
+  &__tablet-laptop-title {
+    @include for-size(mobile) {
+      display: none;
+    }
+  }
+
+  &__mobile-title {
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
+
+  // about  для мобильного
+  &__person-about {
+    @include for-size(tablet) {
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: -999px;
+    }
+  }
+
+  //tablet slider about
+  &__person-about-tablet {
+    @include for-size(mobile) {
+      display: none;
+    }
+
+    @include for-size(tablet) {
+      font-size: 11px;
+      line-height: 20px;
+      position: static;
+      width: 470px;
+      height: auto;
+    }
+    @include for-size(desktop) {
+      position: static;
+      width: 700px;
+      font-size: 16.67px;
+      line-height: 29px;
+      letter-spacing: 0.85px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__image-responsive,
+  &__image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 21px;
+    @include for-size(desktop) {
+      width: 145px;
+      height: 145px;
+      margin-bottom: 21px;
+    }
+  }
+
+  //навигационные изобраджения
+  &__image-cover {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__nav-image {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  //slider контент
+  &__secondary-title,
+  &__read-more {
+    color: $third-color;
+  }
+
+  &__read-more {
+    text-decoration: underline;
+  }
+  &__read-more:visited {
+    color: $third-color;
+  }
+
+  &__secondary-title {
+    font-size: 13px;
+    margin-bottom: 23px;
+  }
+  @include for-size(tablet) {
+    &__secondary-title {
+      font-size: 18px;
+    }
+  }
+  @include for-size(desktop) {
+    &__secondary-title {
+      margin-bottom: 23px;
+      font-size: 25px;
+    }
+  }
+
+  &__person-about {
+    color: $main-color;
+    max-width: 240px;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  &__person-education {
+    max-width: 240px;
+    font-weight: 500;
+    color: $fifth-color;
+    font-size: 11px;
+    margin-bottom: 23px;
+    @include for-size(tablet) {
+      max-width: 465px;
+      font-size: 12.5px;
+      margin-bottom: 28px;
+    }
+  }
+
+  //социальная иконка
+  &__vk-icon {
+    width: 18px;
+    height: 14px;
+    margin-bottom: 11px;
+    @include for-size(tablet) {
+      width: 25px;
+      height: 14px;
+    }
+  }
+}
