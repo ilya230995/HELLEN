@@ -1,5 +1,5 @@
 .header {
-    background-image: url(../../images/mobile/bg-bottom-header.png);
+    background-image: url(../images/mobile/bg-bottom-header.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 32px;
@@ -11,9 +11,13 @@
     }
 }
 .container_background {
-    background-image: url(../../images/mobile/bg-header-mobile.png);
+    background-image: url(../images/mobile/bg-header-mobile.png);
     background-position: center;
     background-repeat: no-repeat;
+    @media (min-resolution: 192dpi) {
+        background-image: url(../images/mobile/bg-header-mobile@2x.png);
+        background-size: 77%;
+    }
 }
 .navigation {
     display: flex;
@@ -210,12 +214,16 @@
 }
 @media (min-width: 768px) {
     .header {
-        background-image: url(../../images/tablet/bg-bottom-header.png);
+        background-image: url(../images/tablet/bg-bottom-header.png);
 
     }
     .container_background {
-        background-image: url(../../images/tablet/bg-header-tablet.png);
+        background-image: url(../images/tablet/bg-header-tablet.png);
         background-position: right;
+        @media (min-resolution: 192dpi) {
+            background-image: url(../images/tablet/bg-header-tablet@2x.png);
+            background-size: 54%;
+        }
 
     }
     .site-logo_header {
@@ -238,7 +246,7 @@
         max-width: 270px;
     }
     .modal-btn {
-        margin: 0 0 212px 0;
+        margin: 0 0 125px 0;
     }
     .about-list {
         display: flex;
@@ -252,9 +260,14 @@
         }
     }
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+    .container_background {
+        background-position-y: 100px;
+    }
+}
 @media (min-width: 1280px) {
     .header {
-        background-image: url(../../images/laptop-1280/bg-bottom-header.png);
+        background-image: url(../images/laptop-1280/bg-bottom-header.png);
         padding-top: 36px;
         padding-bottom: 112px;
         &__title-descr {
@@ -263,7 +276,11 @@
         }
     }
     .container_background {
-        background-image: url(../../images/laptop-1280/bg-header-1280.png);
+        background-image: url(../images/laptop-1280/bg-header-1280.png);
+        @media (min-resolution: 192dpi) {
+            background-image: url(../images/laptop-1280/bg-header-laptop-1280@2x.png);
+            background-size: 57%;
+        }
     }
     .navigation {
         margin-bottom: 120px;  
@@ -339,7 +356,7 @@
 }
 @media (min-width: 1680px) {
     .header {
-        background-image: url(../../images/laptop-1680/bg-bottom-header.png);
+        background-image: url(../images/laptop-1680/bg-bottom-header.png);
         padding-top: 28px;
         padding-bottom: 150px;
         &__title-descr {
@@ -348,7 +365,11 @@
         }
     }
     .container_background {
-        background-image: url(../../images/laptop-1680/bg-header-laptop-large.png);
+        background-image: url(../images/laptop-1680/bg-header-laptop-large.png);
+        @media (min-resolution: 192dpi) {
+            background-image: url(../images/laptop-1680/bg-header-laptop-large@2x.png);
+            background-size: 63%;
+        }
      }
     .navigation {
         margin-bottom: 148px;  
