@@ -8,17 +8,14 @@
 
   @include for-size(tablet) {
     padding-top: 68px;
-
   }
 
   @include for-size(desktop) {
     padding-top: 82px;
-
   }
 
   @include for-size(hd-desktop) {
     padding-top: 132px;
-
   }
 
   &-wrapper {
@@ -31,7 +28,8 @@
       border-top: 2px solid $fifth-color;
     }
 
-    @include for-size(hd-desktop) {}
+    @include for-size(hd-desktop) {
+    }
   }
 
   &-img {
@@ -147,8 +145,6 @@
       @include for-size(desktop) {
         display: none;
       }
-
-
     }
 
     &__item {
@@ -289,13 +285,10 @@
     font-size: 11px;
     line-height: 20px;
     color: $fifth-color;
-    opacity: 50%;
 
     @include for-size(desktop) {
       font-size: 19px;
       line-height: 29px;
     }
-
-
   }
 }
