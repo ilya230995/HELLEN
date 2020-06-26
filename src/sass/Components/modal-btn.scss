@@ -10,6 +10,7 @@
   color: $secondary-color;
   letter-spacing: 1.43px;
   &__header {
+    margin-bottom: 30px;
     @include for-size(desktop) {
       width: 304px;
       height: 72px;
