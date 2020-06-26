@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   @media (min-resolution: 192dpi) {
     background-image: url(../images/mobile/bg-header-mobile@2x.png);
-    background-size: 77%;
+    background-size: 60%;
   }
   @include for-size(desktop) {
     background-size: 70%;
