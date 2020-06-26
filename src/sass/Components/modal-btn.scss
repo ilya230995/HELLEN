@@ -36,6 +36,7 @@
     @include for-size(tablet) {
       width: 250px;
       height: 48px;
+      margin: 0 auto !important;
     }
     @include for-size(desktop) {
       width: 350px;
