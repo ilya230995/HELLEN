@@ -1,7 +1,6 @@
 .header {
   background-image: url(../images/mobile/bg-bottom-header.png);
   background-repeat: no-repeat;
-  background-position-x: 200px;
   background-size: contain;
   padding-top: 32px;
   padding-bottom: 54px;
@@ -18,6 +17,9 @@
   @media (min-resolution: 192dpi) {
     background-image: url(../images/mobile/bg-header-mobile@2x.png);
     background-size: 77%;
+  }
+  @include for-size(desktop) {
+    background-size: 70%;
   }
 }
 .navigation {
@@ -293,7 +295,7 @@
       font-family: Roboto;
       text-transform: uppercase;
       &:not(:last-child) {
-        margin: 0 44px 0 0;
+        margin: 0;
       }
     }
   }
