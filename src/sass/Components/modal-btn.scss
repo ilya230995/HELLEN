@@ -1,27 +1,47 @@
 .modal-btn {
-    width: 246px;
-    height: 44px;
-    border: 2px solid rgb(255, 107, 8);
-    background-color: rgb(255, 107, 8);
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 11px;
-    &_white {
-        @media (min-width: 1280px) {
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
+  width: 246px;
+  height: 44px;
+  border: 2px solid rgb(255, 107, 8);
+  background-color: rgb(255, 107, 8);
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  letter-spacing: 1.43px;
+  &__header {
+    @include for-size(desktop) {
+      width: 304px;
+      height: 72px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 210px;
     }
-    @media (min-width: 1280px) {
-        width: 304px;
-        height: 72px;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-    @media (min-width: 1680px) {
-        font-size: 14px;
-        width: 354px;
-        letter-spacing: 3px;
 
+    @include for-size(hd-desktop) {
+      font-size: 14px;
+      width: 354px;
+      letter-spacing: 3px;
     }
-}  
+  }
+  &_white {
+    @media (min-width: 1280px) {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__reg {
+    margin: 0 auto;
+    @include for-size(tablet) {
+      width: 250px;
+      height: 48px;
+    }
+    @include for-size(desktop) {
+      width: 350px;
+      height: 68px;
+      font-size: 14px;
+      letter-spacing: 3.4px;
+    }
+  }
+}

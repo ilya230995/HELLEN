@@ -200,28 +200,6 @@
       font-size: 26px;
     }
   }
-  &__btn {
-    width: 246px;
-    height: 44px;
-    border: 2px solid rgb(255, 107, 8);
-    background-color: rgb(255, 107, 8);
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 11px;
-    color: $secondary-color;
-    letter-spacing: 1.43px;
-    text-transform: uppercase;
-    @include for-size(tablet) {
-      width: 250px;
-      height: 48px;
-    }
-    @include for-size(desktop) {
-      width: 350px;
-      height: 68px;
-      font-size: 14px;
-      letter-spacing: 3.4px;
-    }
-  }
 
   .span_mod {
     @include for-size(tablet) {

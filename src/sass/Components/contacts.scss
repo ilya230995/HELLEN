@@ -21,6 +21,17 @@
     // text-decoration: none;
     color: $fourth-color;
   }
+  &__phone-wrap {
+    position: relative;
+  }
+  .phone-icon {
+    fill: #ff6b08;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -28px;
+    top: 0;
+  }
   &__phone {
     margin-bottom: 25px;
     font-family: $main-font;
@@ -29,21 +40,13 @@
     color: $fourth-color;
     letter-spacing: 0.6px;
     padding-left: 14px;
-    position: relative;
   }
   &__items {
     margin-bottom: 20px;
     width: 280px;
   }
 }
-.phone-icon {
-  fill: #ff6b08;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: 23px;
-  top: 0px;
-}
+
 @media (min-width: 768px) {
   .container {
     margin: 0 auto;
