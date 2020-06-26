@@ -84,14 +84,14 @@
     left: -20px;
     top: 11px;
   }
-  .contacts__phone::after {
+  .contacts__phone-wrap::after {
     content: '';
     position: absolute;
     width: 2px;
     height: 29px;
     background-color: #e0e0e0;
-    top: 3px;
-    left: 265px;
+    top: -5px;
+    right: -9px;
   }
   .site-logo {
     transform: scale(1.7);
